@@ -1,0 +1,124 @@
+---
+title: "DE_analysis_eels"
+author: "Ludovic Dutoit"
+date: "3/11/2020"
+output: github_document
+
+---
+
+First, I go through the dataset, here it is:
+```{r, echo=F, message=F,warning=FALSE}
+library(tidyr)
+library(DESeq2)
+library(pheatmap)
+library(stringr)
+library(ggplot2)
+library(matrixStats)
+library(pheatmap)
+library(edgeR)
+library("RColorBrewer")
+
+counts=read.csv("~/Trinity_trans.isoform.counts.matrix", sep="", head=T)
+head(counts)
+colnames(counts)
+
+
+
+######### Do the filtering
+samples=cbind(colnames(counts),rep(c("silver","yellow"),each=6))
+rownames(samples)<-samples[,1]
+samples=as.data.frame(samples[,-1])
+colnames(samples)<-"treatment"
+treatment <- factor(rep(c("silver","yellow"),each=6))
+```
+
+### Basic filtering
+```{r}
+des <- model.matrix(~treatment)
+dge <- DGEList(counts=counts) 
+keep <- filterByExpr(counts, des) # inside function of limma aware of the design to remove rad counts
+dge <- dge[keep,keep.lib.sizes=FALSE]
+
+cutoff <- 2
+keep <- !(apply(cpm(dge), 1, mean) < cutoff) # remove gene with average cpm below 2
+dge <- dge[keep,keep.lib.sizes=FALSE]
+
+dge<- calcNormFactors(dge)
+print("After filtering, kept a matrix of X genes by Y samples:")
+dim(dge)
+```
+### Some visualisation after basic filtering
+```{r}
+
+###all counts
+logCounts = log2(as.matrix(counts)+ 0.5)
+boxplot(as.matrix(logCounts) ~ col(logCounts),names=c("s1","s2","s3","s4","s5","s6","y1","y2","y3","y4","y5","y6"),main= "log Raw counts",sub="Y has a lot of transcripts with low counts")
+
+###dge
+logCounts = log2(as.matrix(dge)+ 0.5)
+boxplot(as.matrix(logCounts) ~ col(logCounts),names=c("s1","s2","s3","s4","s5","s6","y1","y2","y3","y4","y5","y6"),main= "log filtered counts",sub="Those low yellow transcripts are filtered out")
+print(paste(c("number of transcripts:"," before filtering ",dim(counts)[1]," after filtering ",dim(dge)[1])))
+
+print("While we get rid of most transcripts (lowly expressed), we keep a high proportion of all reads per samples")
+apply(dge,2,sum)/apply(counts,2,sum)
+```
+
+
+### DE analysis 
+
+```{r}
+logCPM <- cpm(dge, log=TRUE)
+design <- model.matrix(~samples$treatment)
+
+v <- voom(dge, design, plot=TRUE, normalize="quantile")
+plotMDS(v, labels=colnames(v), main="MDS plot", col=rep(c("blue","red"),each=6))
+
+
+
+fit <- lmFit(v, design)
+fit <- eBayes(fit, trend=TRUE)
+results<-topTable(fit, coef=ncol(design),n=Inf)
+sum(results$adj.P.Val<0.05)
+##Table of DE genes
+DE_counts<-dge[results$adj.P.Val<0.05,]
+DE_results<-results[results$adj.P.Val<0.05,]
+
+
+#positive means more in yellow
+#negative means more in gray
+
+length(which(DE_results$logFC<0))
+length(which(DE_results$logFC>0))
+mean(DE_results$logFC[which(DE_results$logFC>0)])
+mean(DE_results$logFC[which(DE_results$logFC<0)])
+
+###Volcano plot
+plot(results$logFC,-log(results$adj.P.Val),pch=10,cex=0.1)
+points(DE_results$logFC,-log(DE_results$adj.P.Val),pch=10,cex=0.1,col="red")
+
+
+
+plot(results$AveExpr,results$logFC,pch=10,cex=0.1)
+points(DE_results$AveExpr,DE_results$logFC,pch=10,cex=0.1,col="red")
+
+#Look at gene express only in one of the two, look at extreme genes ... on top of volcano plot. Those ref ones have low variance within, higher between
+#Should I filter more?
+
+```
+
+```{r}
+library(ggplot2)
+sub_counts<-counts[grep("TRINITY_DN88476",rownames(counts)),]
+type = as.factor(rep(c("Silver","Yellow"),each=6))
+color = rep(c("lightslategray","yellow"),each=6)
+
+for (i in 1:dim(sub_counts)[1]){
+  print(sub_counts[i,])
+  transcript_name<-(rownames(sub_counts[i,]))
+  if(transcript_name%in%rownames(results)){                     title_bit<-paste(transcript_name,", p-adjusted =",round(      results$adj.P.Val[which(rownames(results)==transcript_name)],4))}else{title_bit<-paste(transcript_name,"NOT passing filtering")}
+  transcript<-data.frame(Counts= as.numeric(sub_counts[i,]),Type =type,color=color)
+  x<-ggplot(data = transcript, mapping = aes(x = Type, y = Counts)) +  
+    geom_jitter(alpha = 0.9, height=0,width=0.2) + theme_light() +ggtitle(title_bit)
+  plot(x)
+  }
+```
