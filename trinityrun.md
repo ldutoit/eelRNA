@@ -88,36 +88,40 @@ srun Trinity --no_distributed_trinity_exec \
 
 
 The next step is to obtain a count matrix
-I used the tutorial at ...
+I used the tutorial at:
 https://southgreenplatform.github.io/trainings/trinityTrinotate/TP-trinity/
 
 
+The next step is to obtain a count matrix
+I used the tutorial at
 
-# create a salmon_outdir 
 
-TO Adapt
+```
+module load Miniconda3
+module load Trinity
+source activate transdecoder #module that contains rsem and other of my trinity utils
+module load  SAMtools/1.8-gimkl-2018b Bowtie2 # the default samtools
 
-# salmon
-util/align_and_estimate_abundance.pl \
+align_and_estimate_abundance.pl \
 --transcripts FR_trinity_output/Trinity.fasta \
 --seqType fq \
 --samples_file samples_file.txt \
---est_method salmon \
+--est_method RSEM --aln_method bowtie2 \
 --trinity_mode \
---prep_reference > salmon_align_and_estimate_abundance.log 2>&1 &
+--prep_reference \
+--thread_count 16 \
+--coordsort_bam > bowtie-rsem_align_and_estimate_abundance.log 
+```
+
+We obtain gene counts.
 
 
-$path_to_trinity/util/abundance_estimates_to_matrix.pl \
---est_method salmon \
---out_prefix Trinity_trans \
---name_sample_by_basedir \
---gene_trans_map none \
-CENPK_rep1/quant.sf \
-CENPK_rep2/quant.sf \
-CENPK_rep3/quant.sf \
-Batch_rep1/quant.sf \
-Batch_rep2/quant.sf \
-Batch_rep3/quant.sf 
+https://ycl6.gitbook.io/rna-seq-data-analysis/differential_expression_analysis_using_r/perform_de_analysis_trinity
 
+To obtain gene level estimates! **In CONSTRUCTION**
 
-Buscp
+```
+abundance_estimates_to_matrix.pl \
+--est_method RSEM --out_prefix Trinity_genes --gene_trans_map Trinity.fasta.gene_trans_map
+```
+
