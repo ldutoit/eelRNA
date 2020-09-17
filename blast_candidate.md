@@ -7,3 +7,4 @@ blastx -query  12genelucila.fasta  -db Trinity.fasta.transdecoder.pep -outfmt 7 
 
 makeblastdb -in Trinity.fasta.transdecoder.pep -dbtype prot
 blastx -query  12genelucila.fasta  -db Trinity.fasta.transdecoder.pep -outfmt 7  -max_target_seqs 2  >  blast_results.txt
+
