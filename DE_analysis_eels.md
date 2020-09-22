@@ -152,38 +152,26 @@ sum(results$adj.P.Val<0.05)
 ``` r
 ##Table of DE genes
 DE_counts<-dge[results$adj.P.Val<0.05,]
-DE_results<-results[results$adj.P.Val<0.05,]
+DE_results<-results[results$adj.P.Val<0.05,] # DE_results are only the significant genes
 
 
 #positive means more in yellow
 #negative means more in gray
 
-length(which(DE_results$logFC<0))
+length(which(DE_results$logFC<0)) # how many genes under expressed in yellow
 ```
 
     ## [1] 1481
 
 ``` r
-length(which(DE_results$logFC>0))
+length(which(DE_results$logFC>0)) # how many genes over expressed in yellow
 ```
 
     ## [1] 1397
 
 ``` r
-mean(DE_results$logFC[which(DE_results$logFC>0)])
-```
-
-    ## [1] 0.829659
-
-``` r
-mean(DE_results$logFC[which(DE_results$logFC<0)])
-```
-
-    ## [1] -0.9269828
-
-``` r
-###Volcano plot
-plot(results$logFC,-log(results$adj.P.Val),pch=10,cex=0.1)
+###Volcano plot (relationship between Log Fold Change and -value)
+plot(results$logFC,-log(results$adj.P.Val),pch=10,cex=0.1) 
 points(DE_results$logFC,-log(DE_results$adj.P.Val),pch=10,cex=0.1,col="red")
 ```
 

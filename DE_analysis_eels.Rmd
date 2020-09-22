@@ -81,19 +81,18 @@ results<-topTable(fit, coef=ncol(design),n=Inf)
 sum(results$adj.P.Val<0.05)
 ##Table of DE genes
 DE_counts<-dge[results$adj.P.Val<0.05,]
-DE_results<-results[results$adj.P.Val<0.05,]
+DE_results<-results[results$adj.P.Val<0.05,] # DE_results are only the significant genes
 
 
 #positive means more in yellow
 #negative means more in gray
 
-length(which(DE_results$logFC<0))
-length(which(DE_results$logFC>0))
-mean(DE_results$logFC[which(DE_results$logFC>0)])
-mean(DE_results$logFC[which(DE_results$logFC<0)])
+length(which(DE_results$logFC<0)) # how many genes under expressed in yellow
+length(which(DE_results$logFC>0)) # how many genes over expressed in yellow
 
-###Volcano plot
-plot(results$logFC,-log(results$adj.P.Val),pch=10,cex=0.1)
+
+###Volcano plot (relationship between Log Fold Change and -value)
+plot(results$logFC,-log(results$adj.P.Val),pch=10,cex=0.1) 
 points(DE_results$logFC,-log(DE_results$adj.P.Val),pch=10,cex=0.1,col="red")
 
 
