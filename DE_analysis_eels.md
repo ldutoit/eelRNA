@@ -144,10 +144,10 @@ plotMDS(v, labels=colnames(v), main="MDS plot", col=rep(c("blue","red"),each=6))
 fit <- lmFit(v, design)
 fit <- eBayes(fit, trend=TRUE)
 results<-topTable(fit, coef=ncol(design),n=Inf)
-sum(results$adj.P.Val<0.05)
+sum(results$adj.P.Val<0.05) #How many DE genes?
 ```
 
-    ## [1] 2878
+    ## [1] 2878 # DE GENES
 
 ``` r
 ##Table of DE genes
