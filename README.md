@@ -7,7 +7,6 @@ This project aim at comparing the transcriptome of yellow and silver NZ eels.
 We build the transcriptome of the NZ eel denovo using Trinity. We then run differential expression between 6 Yellow and 6 silver eels with 100bp paired-end data.
 
 ## Description
- of Bruce Robertson. The SNP were called by Yasmin Foster.
 
 The raw data is saved on the HCS of otago university: 
 
@@ -26,7 +25,7 @@ The transcriptome is built in [trinityrun.md](trinityrun.md) all the way to obta
 
 ** IN construction for gene level analysis**
 
-The differential expression analysis is done in [DE_analysis_eels.Rmd](DE_analysis_eels.Rmd)
+The differential expression analysis is done in [DE_analysis_eels.md](DE_analysis_eels.md)
 
 ### GO Enrichment
 
