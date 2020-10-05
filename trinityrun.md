@@ -14,8 +14,10 @@ using Fastqc.
 
 I learn that the data is very good with 35Mio paired end reads per sample.
 
+```
 ln -s ~/projects/eelRNA/source_files/ .
 cd /nesi/nobackup/uoo00116/eelrna/source_files/CleandatafromBGI
+```
 
 I create a sample files  as per below (samples_file.txt)
 
@@ -152,5 +154,5 @@ write.table(txi.rsem$counts,"RSEM_gene_counts.txt",row.names=T,col.names=T,sep="
 
 We can use the expected counts into DeSEQ2 as outlined by Love (DESeq2 author) [here](https://support.bioconductor.org/p/90672/)
 
-I saved the count matrix in this repository [RSEM_gene_counts.txt](RSEM_gene_counts.txt)
+I saved the count matrix in this repository [results_files/RSEM_gene_counts.txt](results_files/RSEM_gene_counts.txt)
 

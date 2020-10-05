@@ -4,11 +4,11 @@ This project aim at comparing the transcriptome of yellow and silver NZ eels.
 
 ## Summary
 
-We build the transcriptome of the NZ eel denovo using Trinity. We then run differential expression between 6 Yellow and 6 silver eels with 100bp paired-end data. All the differentially expressed genes with statistics and counts are saved in [DE_results.txt]. Statistics and counts for ALL Genes are in [...]
+We build the transcriptome of the NZ eel denovo using Trinity. We then run differential expression between 6 Yellow and 6 silver eels with 100bp paired-end data. All the differentially expressed genes with statistics and counts are saved in [results_files/DE_results.txt](results_files/DE_results.txt). Statistics and counts for ALL Genes are in [results_files/ALLgenes_results.txt](results_files/ALLgenes_results.txt).
 
-The Gene ontology enrichment analysis is saved in [diff.GOseq.enriched](diff.GOseq.enriched) and [diff.GOseq.depleted](diff.GOseq.depleted). They are output of GOSeq and one should pay attention to the False Discovery Rate values!
+The Gene ontology enrichment analysis is saved in [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched) and [diff.GOseq.depleted](results_files/diff.GOseq.depleted). They are output of GOSeq and one should pay attention to the False Discovery Rate values!
 
-Finally, all the transcripts fasta sequences are in [Trinity.fasta.gz](Trinity.fasta.gz)
+Finally, all the transcripts fasta sequences are in [results_files/Trinity.fasta.gz](Trinity.fasta.gz)
 
 ## Description
 

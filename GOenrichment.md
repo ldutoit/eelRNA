@@ -66,7 +66,8 @@ biocLite("qvalue") # that one
                        --lengths Trinity.gene_lengths.txt \
                        --background  backgroundGO.txt
 ```
+
 !!!I NEED TO CLEAN THOSE GENE LENGTHS BASED ON LINE 31 of this file@@@
 !!!I NEED TO CHECK WHAT IS THE UNIVERSE/BACKGROUND FOR DE GENES
-I save those files in this repository as [diff.GOseq.depleted](diff.GOseq.depleted) and [diff.GOseq.enriched](diff.GOseq.enriched)
+I save those files in this repository as [results_files/diff.GOseq.depleted](results_files/diff.GOseq.depleted) and [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched)
 
