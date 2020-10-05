@@ -79,6 +79,7 @@ grep -c ">" *txt
 #expressed_genes_matches_to_LDLb.txt:28
 #expressed_genes_matches_to_internalisation.txt:44
 ```
-
+pwd
+	
 
 sort file1 file2| uniq -d

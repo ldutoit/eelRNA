@@ -4,12 +4,15 @@ This project aim at comparing the transcriptome of yellow and silver NZ eels.
 
 ## Summary
 
-We build the transcriptome of the NZ eel denovo using Trinity. We then run differential expression between 6 Yellow and 6 silver eels with 100bp paired-end data.
+We build the transcriptome of the NZ eel denovo using Trinity. We then run differential expression between 6 Yellow and 6 silver eels with 100bp paired-end data. All the differentially expressed genes with statistics and counts are saved in [DE_results.txt]. Statistics and counts for ALL Genes are in [...]
+
+The Gene ontology enrichment analysis is saved in [diff.GOseq.enriched](diff.GOseq.enriched) and [diff.GOseq.depleted](diff.GOseq.depleted). They are output of GOSeq and one should pay attention to the False Discovery Rate values!
+
+Finally, all the transcripts fasta sequences are in [Trinity.fasta.gz](Trinity.fasta.gz)
 
 ## Description
 
 The raw data is saved on the HCS of otago university: 
-
 ```
 /sci-bioinformatics-project-archive/Transcriptome data Lucila 2019
 ```
@@ -21,17 +24,13 @@ contact dutoit.ludovic@gmail.com for access
 
 The transcriptome is built in [trinityrun.md](trinityrun.md) all the way to obtaining gene-level counts for the 12 samples.
 
-### DE Analysis
+### Differential Expression (DE) Analysis
 
-** IN construction for gene level analysis**
-
-The differential expression analysis is done in [DE_analysis_eels.md](DE_analysis_eels.md)
+The differential expression analysis is done in [DE_analysis_eels.Rmd](DE_analysis_eels.Rmd). 
 
 ### GO Enrichment
 
-Annotation of the transcriptome is done in [annotate.md](annotate.md)
-
-That creates the file denovoassembly_annotation_report.xls Which is the complete annotation at the transcript level. 
+Annotation of the transcriptome is done in [annotate.md](annotate.md). That creates the file denovoassembly_annotation_report.xls Which is the complete annotation at the transcript level. 
 
 We then extract GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md)
 

@@ -91,16 +91,17 @@ The next step is to obtain a count matrix
 I used the tutorial at:
 https://southgreenplatform.github.io/trainings/trinityTrinotate/TP-trinity/
 
+The combination of modules and environment below is extremely weird, but it works.
 
-The next step is to obtain a count matrix
-I used the tutorial at
 
 
 ```
+module purge
+module load Trinity/2.8.4-gimkl-2017a
 module load Miniconda3
-module load Trinity
-source activate transdecoder #module that contains rsem and other of my trinity utils
-module load  SAMtools/1.8-gimkl-2018b Bowtie2 # the default samtools
+source activate transdecoder #modu that contains rm #rsem and other of my trinity utils
+module load  Trinity/2.8.4-gimkl-2017a SAMtools/1.8-gimkl-2017a Bowtie/1.2.0-gimkl-2017a RSEM/1.3.1-gimkl-2017a
+
 
 align_and_estimate_abundance.pl \
 --transcripts FR_trinity_output/Trinity.fasta \
@@ -113,15 +114,43 @@ align_and_estimate_abundance.pl \
 --coordsort_bam > bowtie-rsem_align_and_estimate_abundance.log 
 ```
 
-We obtain gene counts.
+We obtain gene counts organised in 12 folder by samples names. We group them in one folder ysing links:
 
+```bash
+mkdir RSEM_results
+cd RSEM_results
+ln -s  ../silver_rep1/RSEM.genes.results silver_rep1.txt
+ln -s  ../silver_rep2/RSEM.genes.results silver_rep2.txt
+ln -s  ../silver_rep3/RSEM.genes.results silver_rep3.txt
+ln -s  ../silver_rep4/RSEM.genes.results silver_rep4.txt
+ln -s  ../silver_rep5/RSEM.genes.results silver_rep5.txt
+ln -s  ../silver_rep6/RSEM.genes.results silver_rep6.txt
+ln -s  ../yellow_rep1/RSEM.genes.results yellow_rep1.txt
+ln -s  ../yellow_rep2/RSEM.genes.results yellow_rep2.txt
+ln -s  ../yellow_rep3/RSEM.genes.results yellow_rep3.txt
+ln -s  ../yellow_rep4/RSEM.genes.results yellow_rep4.txt
+ln -s  ../yellow_rep5/RSEM.genes.results yellow_rep5.txt
+ln -s ../yellow_rep6/RSEM.genes.results yellow_rep6.txt
+```			
 
-https://ycl6.gitbook.io/rna-seq-data-analysis/differential_expression_analysis_using_r/perform_de_analysis_trinity
+In order to create a singleclean matrix we go into R and use the tximport module
 
-To obtain gene level estimates! **In CONSTRUCTION**
+from within ```gene_counts/RSEM_results```
 
+```R
+library("tximport")
+files <- dir()
+txi.rsem <- tximport(files, type = "rsem", txIn = FALSE, txOut = FALSE)
+head(txi.rsem$counts)
+colnames(txi.rsem$counts) <- gsub(".txt","",files)
+head(txi.rsem$counts)
+#I checked manually that the colnames match the counts in the single files
+
+write.table(txi.rsem$counts,"RSEM_gene_counts.txt",row.names=T,col.names=T,sep="\t")
 ```
-abundance_estimates_to_matrix.pl \
---est_method RSEM --out_prefix Trinity_genes --gene_trans_map Trinity.fasta.gene_trans_map
-```
+
+
+We can use the expected counts into DeSEQ2 as outlined by Love (DESeq2 author) [here](https://support.bioconductor.org/p/90672/)
+
+I saved the count matrix in this repository [RSEM_gene_counts.txt](RSEM_gene_counts.txt)
 
