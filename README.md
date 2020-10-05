@@ -8,7 +8,7 @@ We build the transcriptome of the NZ eel denovo using Trinity. We then run diffe
 
 The Gene ontology enrichment analysis is saved in [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched) and [diff.GOseq.depleted](results_files/diff.GOseq.depleted). They are output of GOSeq and one should pay attention to the False Discovery Rate values!
 
-Finally, all the transcripts fasta sequences are in [results_files/Trinity.fasta.gz](Trinity.fasta.gz)
+Finally, all the transcripts fasta sequences are in [results_files/Trinity.fasta.gz](results_files/Trinity.fasta.gz)
 
 ## Description
 
@@ -26,7 +26,7 @@ The transcriptome is built in [trinityrun.md](trinityrun.md) all the way to obta
 
 ### Differential Expression (DE) Analysis
 
-The differential expression analysis is done in [DE_analysis_eels.Rmd](DE_analysis_eels.Rmd). 
+The differential expression analysis is done in [DE_analysis_eels.md](DE_analysis_eels.md). 
 
 ### GO Enrichment
 
