@@ -40,7 +40,12 @@ We then extract GO terms at the gene level  and performed the GO enrichment anal
 
 A couple of utilities to be able to dig in the data using R.
 
-[plotting_transcript.R](plotting_transcript.R) allows to plot the transcripts read counts. It needs both ggplot2 (the first time you may need to install it using install.packages(“tidyverse”) and the file countsand_logFCforplotting.RData inside the same folder than the script (that file contains the results of the analysis and the counts table as R objects).
+
+
+[plotting_genes.R](plotting_genes.R) allows to plot the transcripts read counts. It needs both ggplot2 (the first time you may need to install it using install.packages(“tidyverse”) and the file countsand_logFCforplotting.RData inside the same folder than the script (that file contains the results of the analysis and the counts table as R objects).
+
+[plotting_transcript.R](plotting_transcript.R)The same as plotting genes but utilising salmon transcript-level counts.
+
 
 [extract_sequences.R](extract_sequences.R) This script extract ssequences from the transcript files or the peptide files and save it one sequence file. It works with the file Trinity.fasta ( mRNAs) and the file Trinity.fasta.transdecoder.pep ( contact author for access).
 

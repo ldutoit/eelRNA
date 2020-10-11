@@ -1,5 +1,4 @@
-
-First trun transdecoder
+# First trun transdecoder
 
 ```bash
 #!/bin/sh
