@@ -84,7 +84,28 @@ srun Trinity --no_distributed_trinity_exec \
   --samples_file samples_file.txt --SS_lib_type FR   --output FR_trinity_output
 ```
 
+And phase2:
+```
+#!/bin/bash -e
+#SBATCH --job-name=trinity-phase2grid
+#SBATCH --account=uoo00116  # your NeSI project code
+#SBATCH --time=30:00:00      # enough time for all sub-jobs to complete
+#SBATCH --ntasks=1           # always 1 - this is the master process
+#SBATCH --cpus-per-task=1    # always 1
+#SBATCH --mem=20G            # memory requirements for master process
+#SBATCH --partition=hugemem   # submit to an appropriate partition
+#SBATCH --hint=nomultithread
 
+# load Trinity and HPC GridRunner
+module load Trinity/2.8.5-gimkl-2018b
+module load HpcGridRunner/20181005
+
+# run Trinity - this will be the master HPC GridRunner process that handles
+#   submitting sub-jobs (batches of commands) to the Slurm queue
+srun Trinity --CPU ${SLURM_CPUS_PER_TASK} --max_memory 20G \
+  --grid_exec "hpc_cmds_GridRunner.pl --grid_conf ${SLURM_SUBMIT_DIR}/SLURM.conf -c" \
+   --seqType fq --samples_file samples_file.txt --SS_lib_type FR   --output FR_trinity_output
+```
 
 ### Obtaining iscount matrix
 
