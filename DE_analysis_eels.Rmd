@@ -160,12 +160,24 @@ we also output the 32447 genes representing the whole genome for the GOSeq analy
 
 ```{r}
 write(rownames(dge$counts),"backgroundGO.txt",sep="\n")
+write(rownames(dge$counts),"backgroundALLGO.txt",sep="\n")
+
 ```
 
-And finally we u8pload the results for ALL the genes:
+And finally we upload the results for ALL the genes:
 
 ```{r}
 final_results<-merge(results,dge$counts,by=0)
 colnames(final_results)[1]<-"GeneID"
 write.table(final_results,"ALLgenes_results.txt",row.names=T,col.names=T,sep="\t")
+```
+
+
+### Saving data for plotting_genes.R
+
+```{r}
+###Careful, dirty fix 
+counts<-cpm(dge$counts)
+save(counts,results,file="countsand_logFCforplottingGene.RData")
+rm(counts) #to make sure I don't use it thinking it is counts
 ```

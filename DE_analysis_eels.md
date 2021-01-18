@@ -275,5 +275,8 @@ write.table(final_results,"ALLgenes_results.txt",row.names=T,col.names=T,sep="\t
 ### Saving data for plotting\_genes.R
 
 ``` r
+###Careful, dirty fix 
+counts<-cpm(dge$counts)
 save(counts,results,file="countsand_logFCforplottingGene.RData")
+rm(counts) #to make sure I don't use it thinking it is counts
 ```
