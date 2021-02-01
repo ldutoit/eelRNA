@@ -157,12 +157,15 @@ write.table(final_results_DE,"DE_results.txt",row.names=T,col.names=T,sep="\t")
 ```
 
 we also output the 32447 genes representing the whole genome for the GOSeq analysis:
+... not the 32447 but 32447- the background
 
 ```{r}
 write(rownames(dge$counts),"backgroundGO.txt",sep="\n")
 write(rownames(dge$counts),"backgroundALLGO.txt",sep="\n")
 
 ```
+
+Split into logfoldchangeabove0 and logfoldchangebelow0
 
 And finally we upload the results for ALL the genes:
 
