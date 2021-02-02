@@ -1,0 +1,393 @@
+category	over_represented_pvalue	under_represented_pvalue	numDEInCat	numInCat	term	ontology	over_represented_FDR	under_represented_FDR	go_term
+GO:0007157	0.999998096871524	1.0751034316111e-05	5	58	heterophilic cell-cell adhesion via plasma membrane cell adhesion molecules	BP	0.9999999999	0.176220203475375	BP heterophilic cell-cell adhesion via plasma membrane cell adhesion molecules
+GO:0043005	0.999975527460647	3.76788299731294e-05	124	479	neuron projection	CC	0.9999999999	0.308796851044782	CC neuron projection
+GO:0007221	0.999983730509428	0.000234667570890838	1	29	positive regulation of transcription of Notch receptor target	BP	0.9999999999	0.945275170211233	BP positive regulation of transcription of Notch receptor target
+GO:0005604	0.999884239647014	0.000253284746620834	27	124	basement membrane	CC	0.9999999999	0.945275170211233	CC basement membrane
+GO:0007155	0.999803359446256	0.000288351891346237	127	465	cell adhesion	BP	0.9999999999	0.945275170211233	BP cell adhesion
+GO:0031256	1	0.000498091387821057	0	21	leading edge membrane	CC	0.9999999999	0.979814839173123	CC leading edge membrane
+GO:0061053	0.999962841568659	0.000509733451955971	1	24	somite development	BP	0.9999999999	0.979814839173123	BP somite development
+GO:0021915	0.999830004414865	0.000577649781919601	8	59	neural tube development	BP	0.9999999999	0.979814839173123	BP neural tube development
+GO:0007626	0.999698750908851	0.000645633821218297	25	116	locomotory behavior	BP	0.9999999999	0.979814839173123	BP locomotory behavior
+GO:0007156	0.999639332936358	0.000684308969555621	36	161	homophilic cell adhesion via plasma membrane adhesion molecules	BP	0.9999999999	0.979814839173123	BP homophilic cell adhesion via plasma membrane adhesion molecules
+GO:0045665	0.999738391582103	0.000706484703535764	13	77	negative regulation of neuron differentiation	BP	0.9999999999	0.979814839173123	BP negative regulation of neuron differentiation
+GO:0050839	0.999708026607526	0.000782953578605258	13	77	cell adhesion molecule binding	MF	0.9999999999	0.979814839173123	MF cell adhesion molecule binding
+GO:0009887	0.99958188741581	0.000838357775887686	29	135	animal organ morphogenesis	BP	0.9999999999	0.979814839173123	BP animal organ morphogenesis
+GO:0005930	0.999589419979026	0.000907343364512238	22	101	axoneme	CC	0.9999999999	0.979814839173123	CC axoneme
+GO:0098609	0.999481340930677	0.000913074643053861	46	189	cell-cell adhesion	BP	0.9999999999	0.979814839173123	BP cell-cell adhesion
+GO:0007399	0.99930818621614	0.00105484997374672	85	319	nervous system development	BP	0.9999999999	0.979814839173123	BP nervous system development
+GO:0030424	0.999201722648697	0.00112266781304473	133	473	axon	CC	0.9999999999	0.979814839173123	CC axon
+GO:0008589	0.999790687082576	0.00118326907713602	3	32	regulation of smoothened signaling pathway	BP	0.9999999999	0.979814839173123	BP regulation of smoothened signaling pathway
+GO:0045793	0.999903400992208	0.00119637481426597	1	23	positive regulation of cell size	BP	0.9999999999	0.979814839173123	BP positive regulation of cell size
+GO:0090136	0.999905058739072	0.00120075155500112	1	21	epithelial cell-cell adhesion	BP	0.9999999999	0.979814839173123	BP epithelial cell-cell adhesion
+GO:0043325	0.999734576529871	0.00126672890614195	4	34	phosphatidylinositol-3,4-bisphosphate binding	MF	0.9999999999	0.979814839173123	MF phosphatidylinositol-3,4-bisphosphate binding
+GO:0031529	0.99989467557747	0.00131510746518264	1	21	ruffle organization	BP	0.9999999999	0.979814839173123	BP ruffle organization
+GO:0032587	0.999163074468849	0.00164039628115699	28	129	ruffle membrane	CC	0.9999999999	0.9999999999	CC ruffle membrane
+GO:0005640	0.999703959081448	0.00165847967688063	3	28	nuclear outer membrane	CC	0.9999999999	0.9999999999	CC nuclear outer membrane
+GO:0071356	0.99921274552058	0.00168695781465472	21	104	cellular response to tumor necrosis factor	BP	0.9999999999	0.9999999999	BP cellular response to tumor necrosis factor
+GO:0000145	0.999851916404884	0.00177153514614082	1	21	exocyst	CC	0.9999999999	0.9999999999	CC exocyst
+GO:0035264	0.998979119030668	0.00189911089861184	33	143	multicellular organism growth	BP	0.9999999999	0.9999999999	BP multicellular organism growth
+GO:0022848	1	0.00192163839186984	0	16	acetylcholine-gated cation-selective channel activity	MF	0.9999999999	0.9999999999	MF acetylcholine-gated cation-selective channel activity
+GO:0032183	0.999838198199623	0.00193345513059917	1	20	SUMO binding	MF	0.9999999999	0.9999999999	MF SUMO binding
+GO:1904262	0.999703627227632	0.00210394534779742	2	24	negative regulation of TORC1 signaling	BP	0.9999999999	0.9999999999	BP negative regulation of TORC1 signaling
+GO:0016339	0.999461447014448	0.00212284802189582	5	40	calcium-dependent cell-cell adhesion via plasma membrane cell adhesion molecules	BP	0.9999999999	0.9999999999	BP calcium-dependent cell-cell adhesion via plasma membrane cell adhesion molecules
+GO:0043010	0.999073476982502	0.00216045479706731	16	82	camera-type eye development	BP	0.9999999999	0.9999999999	BP camera-type eye development
+GO:0001917	0.999335799170422	0.00222115491239793	7	45	photoreceptor inner segment	CC	0.9999999999	0.9999999999	CC photoreceptor inner segment
+GO:0005198	0.998740860478831	0.00225370664279472	37	155	structural molecule activity	MF	0.9999999999	0.9999999999	MF structural molecule activity
+GO:0005102	0.998436445976257	0.00236717628890073	76	290	receptor binding	MF	0.9999999999	0.9999999999	MF receptor binding
+GO:0019894	0.999083485332491	0.00247803766026055	11	59	kinesin binding	MF	0.9999999999	0.9999999999	MF kinesin binding
+GO:0005547	0.999035325199907	0.00253072548280305	12	60	phosphatidylinositol-3,4,5-trisphosphate binding	MF	0.9999999999	0.9999999999	MF phosphatidylinositol-3,4,5-trisphosphate binding
+GO:0030667	0.999213643211925	0.00258103352493066	7	46	secretory granule membrane	CC	0.9999999999	0.9999999999	CC secretory granule membrane
+GO:0060171	1	0.00265534785777925	0	11	stereocilium membrane	CC	0.9999999999	0.9999999999	CC stereocilium membrane
+GO:0007507	0.997896177579015	0.00308371932117145	87	317	heart development	BP	0.9999999999	0.9999999999	BP heart development
+GO:0090043	1	0.00315577657606244	0	16	regulation of tubulin deacetylation	BP	0.9999999999	0.9999999999	BP regulation of tubulin deacetylation
+GO:0005892	1	0.00320220951571572	0	14	acetylcholine-gated channel complex	CC	0.9999999999	0.9999999999	CC acetylcholine-gated channel complex
+GO:0044458	0.999713440695075	0.00324516259470536	1	18	motile cilium assembly	BP	0.9999999999	0.9999999999	BP motile cilium assembly
+GO:0042472	0.998708876666759	0.00329461403078991	12	62	inner ear morphogenesis	BP	0.9999999999	0.9999999999	BP inner ear morphogenesis
+GO:0044331	0.999096172986798	0.00340309042676512	5	39	cell-cell adhesion mediated by cadherin	BP	0.9999999999	0.9999999999	BP cell-cell adhesion mediated by cadherin
+GO:0007595	0.999006316954347	0.00342111376131775	6	42	lactation	BP	0.9999999999	0.9999999999	BP lactation
+GO:0051491	0.998669876152925	0.00349273409420604	11	59	positive regulation of filopodium assembly	BP	0.9999999999	0.9999999999	BP positive regulation of filopodium assembly
+GO:0035329	0.999128187390513	0.00375157963939106	4	31	hippo signaling	BP	0.9999999999	0.9999999999	BP hippo signaling
+GO:0030216	0.998661685647189	0.00378234258628665	9	53	keratinocyte differentiation	BP	0.9999999999	0.9999999999	BP keratinocyte differentiation
+GO:0003823	0.999224192281186	0.00381495147332827	3	32	antigen binding	MF	0.9999999999	0.9999999999	MF antigen binding
+GO:0045053	1	0.00413452425130751	0	10	protein retention in Golgi apparatus	BP	0.9999999999	0.9999999999	BP protein retention in Golgi apparatus
+GO:0030054	0.99719376680192	0.0042302256955281	71	257	cell junction	CC	0.9999999999	0.9999999999	CC cell junction
+GO:1903078	0.998107004673143	0.00430341491544642	15	77	positive regulation of protein localization to plasma membrane	BP	0.9999999999	0.9999999999	BP positive regulation of protein localization to plasma membrane
+GO:0019216	0.997938845658622	0.00458001838186751	16	78	regulation of lipid metabolic process	BP	0.9999999999	0.9999999999	BP regulation of lipid metabolic process
+GO:0043426	0.999533508165206	0.00474951692045352	1	22	MRF binding	MF	0.9999999999	0.9999999999	MF MRF binding
+GO:0018076	0.999509271518801	0.00492567157778335	1	23	N-terminal peptidyl-lysine acetylation	BP	0.9999999999	0.9999999999	BP N-terminal peptidyl-lysine acetylation
+GO:0030159	0.998816934959539	0.00495347370063991	4	30	receptor signaling complex scaffold activity	MF	0.9999999999	0.9999999999	MF receptor signaling complex scaffold activity
+GO:0004468	1	0.00501343373110741	0	15	lysine N-acetyltransferase activity, acting on acetyl phosphate as donor	MF	0.9999999999	0.9999999999	MF lysine N-acetyltransferase activity, acting on acetyl phosphate as donor
+GO:0005581	0.997719408198169	0.00507783943792222	16	73	collagen trimer	CC	0.9999999999	0.9999999999	CC collagen trimer
+GO:0007268	0.996838461183689	0.00511961107861618	47	190	chemical synaptic transmission	BP	0.9999999999	0.9999999999	BP chemical synaptic transmission
+GO:0034993	0.99953127950116	0.00525424922671378	1	14	LINC complex	CC	0.9999999999	0.9999999999	CC LINC complex
+GO:0060271	0.996214676326981	0.00552067244067664	81	282	cilium assembly	BP	0.9999999999	0.9999999999	BP cilium assembly
+GO:0005178	0.996732807243035	0.0055652641135316	38	151	integrin binding	MF	0.9999999999	0.9999999999	MF integrin binding
+GO:0070776	0.999447603977107	0.00569512377019014	1	18	MOZ/MORF histone acetyltransferase complex	CC	0.9999999999	0.9999999999	CC MOZ/MORF histone acetyltransferase complex
+GO:1990138	0.998351519831513	0.0058870152578553	5	37	neuron projection extension	BP	0.9999999999	0.9999999999	BP neuron projection extension
+GO:0060285	0.999454567131189	0.00597192317636715	1	14	cilium-dependent cell motility	BP	0.9999999999	0.9999999999	BP cilium-dependent cell motility
+GO:0042491	1	0.00620704809948348	0	11	auditory receptor cell differentiation	BP	0.9999999999	0.9999999999	BP auditory receptor cell differentiation
+GO:0060548	0.996695849706533	0.00686326044755728	18	83	negative regulation of cell death	BP	0.9999999999	0.9999999999	BP negative regulation of cell death
+GO:0001658	0.997670267657921	0.00698580855407893	7	43	branching involved in ureteric bud morphogenesis	BP	0.9999999999	0.9999999999	BP branching involved in ureteric bud morphogenesis
+GO:0042813	0.998432563021681	0.00735080900361393	3	26	Wnt-activated receptor activity	MF	0.9999999999	0.9999999999	MF Wnt-activated receptor activity
+GO:1904645	1	0.00740550107554111	0	12	response to amyloid-beta	BP	0.9999999999	0.9999999999	BP response to amyloid-beta
+GO:0097150	0.998780308671208	0.00743273153533398	2	21	neuronal stem cell population maintenance	BP	0.9999999999	0.9999999999	BP neuronal stem cell population maintenance
+GO:0003429	0.998790430158581	0.00745447453231205	2	20	growth plate cartilage chondrocyte morphogenesis	BP	0.9999999999	0.9999999999	BP growth plate cartilage chondrocyte morphogenesis
+GO:0002209	1	0.00746104726216047	0	14	behavioral defense response	BP	0.9999999999	0.9999999999	BP behavioral defense response
+GO:0043969	1	0.00746104726216047	0	14	histone H2B acetylation	BP	0.9999999999	0.9999999999	BP histone H2B acetylation
+GO:0061920	1	0.00746104726216047	0	14	protein propionyltransferase activity	MF	0.9999999999	0.9999999999	MF protein propionyltransferase activity
+GO:0061921	1	0.00746104726216047	0	14	peptidyl-lysine propionylation	BP	0.9999999999	0.9999999999	BP peptidyl-lysine propionylation
+GO:0140065	1	0.00746104726216047	0	14	peptide butyryltransferase activity	MF	0.9999999999	0.9999999999	MF peptide butyryltransferase activity
+GO:0140066	1	0.00746104726216047	0	14	peptidyl-lysine crotonylation	BP	0.9999999999	0.9999999999	BP peptidyl-lysine crotonylation
+GO:0140067	1	0.00746104726216047	0	14	peptidyl-lysine butyrylation	BP	0.9999999999	0.9999999999	BP peptidyl-lysine butyrylation
+GO:0140068	1	0.00746104726216047	0	14	histone crotonyltransferase activity	MF	0.9999999999	0.9999999999	MF histone crotonyltransferase activity
+GO:0140069	1	0.00746104726216047	0	14	histone butyryltransferase activity	MF	0.9999999999	0.9999999999	MF histone butyryltransferase activity
+GO:1905636	1	0.00746104726216047	0	14	positive regulation of RNA polymerase II regulatory region sequence-specific DNA binding	BP	0.9999999999	0.9999999999	BP positive regulation of RNA polymerase II regulatory region sequence-specific DNA binding
+GO:0007160	0.996252725142321	0.00749919942243321	20	88	cell-matrix adhesion	BP	0.9999999999	0.9999999999	BP cell-matrix adhesion
+GO:0016234	0.999260910123626	0.00758375073767034	1	15	inclusion body	CC	0.9999999999	0.9999999999	CC inclusion body
+GO:0045162	1	0.00764641012282972	0	11	clustering of voltage-gated sodium channels	BP	0.9999999999	0.9999999999	BP clustering of voltage-gated sodium channels
+GO:0004857	0.998714901508518	0.00777508161951312	2	21	enzyme inhibitor activity	MF	0.9999999999	0.9999999999	MF enzyme inhibitor activity
+GO:0060322	0.998326449394555	0.00778410105909798	3	26	head development	BP	0.9999999999	0.9999999999	BP head development
+GO:0004930	0.994589351503843	0.00818685975572754	59	225	G-protein coupled receptor activity	MF	0.9999999999	0.9999999999	MF G-protein coupled receptor activity
+GO:0001527	1	0.0081905694994165	0	10	microfibril	CC	0.9999999999	0.9999999999	CC microfibril
+GO:0030317	0.996424007454724	0.00824616541971207	13	62	flagellated sperm motility	BP	0.9999999999	0.9999999999	BP flagellated sperm motility
+GO:0060291	0.996783776180938	0.00845618190156992	9	51	long-term synaptic potentiation	BP	0.9999999999	0.9999999999	BP long-term synaptic potentiation
+GO:0045637	1	0.00854199048441526	0	13	regulation of myeloid cell differentiation	BP	0.9999999999	0.9999999999	BP regulation of myeloid cell differentiation
+GO:0030018	0.994637674269107	0.00857759689692496	45	174	Z disc	CC	0.9999999999	0.9999999999	CC Z disc
+GO:0008134	0.993436937885808	0.00864821461916071	138	479	transcription factor binding	MF	0.9999999999	0.9999999999	MF transcription factor binding
+GO:0065004	1	0.00889921085443786	0	13	protein-DNA complex assembly	BP	0.9999999999	0.9999999999	BP protein-DNA complex assembly
+GO:0030509	0.995367035813667	0.00893594819736608	21	98	BMP signaling pathway	BP	0.9999999999	0.9999999999	BP BMP signaling pathway
+GO:0099059	0.998468183695121	0.00896448888164322	2	22	integral component of presynaptic active zone membrane	CC	0.9999999999	0.9999999999	CC integral component of presynaptic active zone membrane
+GO:0060997	0.997647112470778	0.00899958536611421	4	32	dendritic spine morphogenesis	BP	0.9999999999	0.9999999999	BP dendritic spine morphogenesis
+GO:0005887	0.992590797518838	0.00903524300051991	276	896	integral component of plasma membrane	CC	0.9999999999	0.9999999999	CC integral component of plasma membrane
+GO:0005662	1	0.00932921845061464	0	12	DNA replication factor A complex	CC	0.9999999999	0.9999999999	CC DNA replication factor A complex
+GO:0007213	0.999014660706488	0.00940773361004049	1	17	G-protein coupled acetylcholine receptor signaling pathway	BP	0.9999999999	0.9999999999	BP G-protein coupled acetylcholine receptor signaling pathway
+GO:0002039	0.994802100523418	0.00959608832753363	24	109	p53 binding	MF	0.9999999999	0.9999999999	MF p53 binding
+GO:0036159	0.998366357410798	0.00987203056573366	2	18	inner dynein arm assembly	BP	0.9999999999	0.9999999999	BP inner dynein arm assembly
+GO:0007009	0.997051841395451	0.0100655728237692	5	33	plasma membrane organization	BP	0.9999999999	0.9999999999	BP plasma membrane organization
+GO:0007605	0.9936888990572	0.0102414901889933	41	155	sensory perception of sound	BP	0.9999999999	0.9999999999	BP sensory perception of sound
+GO:0071548	1	0.0105191516095677	0	12	response to dexamethasone	BP	0.9999999999	0.9999999999	BP response to dexamethasone
+GO:0090292	1	0.0106111007175479	0	9	nuclear matrix anchoring at nuclear membrane	BP	0.9999999999	0.9999999999	BP nuclear matrix anchoring at nuclear membrane
+GO:0001755	0.994803388885719	0.0106242077073115	17	79	neural crest cell migration	BP	0.9999999999	0.9999999999	BP neural crest cell migration
+GO:2000114	0.996847252102313	0.0106282415651426	5	34	regulation of establishment of cell polarity	BP	0.9999999999	0.9999999999	BP regulation of establishment of cell polarity
+GO:0045218	1	0.0107360612841754	0	10	zonula adherens maintenance	BP	0.9999999999	0.9999999999	BP zonula adherens maintenance
+GO:0060674	0.998852960713106	0.0108183793279028	1	16	placenta blood vessel development	BP	0.9999999999	0.9999999999	BP placenta blood vessel development
+GO:0031434	0.998054739638178	0.0111004612108054	2	21	mitogen-activated protein kinase kinase binding	MF	0.9999999999	0.9999999999	MF mitogen-activated protein kinase kinase binding
+GO:0007601	0.993064627111388	0.0113045234181656	39	150	visual perception	BP	0.9999999999	0.9999999999	BP visual perception
+GO:0050767	0.995148913854931	0.0114179263203905	11	59	regulation of neurogenesis	BP	0.9999999999	0.9999999999	BP regulation of neurogenesis
+GO:0017147	0.996611343077164	0.0114448428420238	5	32	Wnt-protein binding	MF	0.9999999999	0.9999999999	MF Wnt-protein binding
+GO:0050877	0.997381166801663	0.0115772055414935	3	25	nervous system process	BP	0.9999999999	0.9999999999	BP nervous system process
+GO:0032839	0.996938184290405	0.0116041754074904	4	28	dendrite cytoplasm	CC	0.9999999999	0.9999999999	CC dendrite cytoplasm
+GO:0031175	0.992272589624632	0.0117265856909833	54	200	neuron projection development	BP	0.9999999999	0.9999999999	BP neuron projection development
+GO:0048596	0.996825262418977	0.0117731287821918	4	31	embryonic camera-type eye morphogenesis	BP	0.9999999999	0.9999999999	BP embryonic camera-type eye morphogenesis
+GO:0048712	0.998746311387552	0.0118106989640343	1	15	negative regulation of astrocyte differentiation	BP	0.9999999999	0.9999999999	BP negative regulation of astrocyte differentiation
+GO:0035108	0.996848916381117	0.0118996555478356	4	28	limb morphogenesis	BP	0.9999999999	0.9999999999	BP limb morphogenesis
+GO:0035176	0.994803568948316	0.0119323517122921	12	58	social behavior	BP	0.9999999999	0.9999999999	BP social behavior
+GO:0034332	0.995091591189107	0.0119335561388164	10	55	adherens junction organization	BP	0.9999999999	0.9999999999	BP adherens junction organization
+GO:0001558	0.994501480555699	0.012002478778527	14	63	regulation of cell growth	BP	0.9999999999	0.9999999999	BP regulation of cell growth
+GO:0045652	0.994486569181779	0.0122814937360438	13	61	regulation of megakaryocyte differentiation	BP	0.9999999999	0.9999999999	BP regulation of megakaryocyte differentiation
+GO:0005543	0.992849998744521	0.0123439997042745	30	120	phospholipid binding	MF	0.9999999999	0.9999999999	MF phospholipid binding
+GO:0030594	0.996652695325125	0.0123978081510268	4	30	neurotransmitter receptor activity	MF	0.9999999999	0.9999999999	MF neurotransmitter receptor activity
+GO:0072576	1	0.0124908000273651	0	10	liver morphogenesis	BP	0.9999999999	0.9999999999	BP liver morphogenesis
+GO:0030506	0.994990016331066	0.0126623623824922	9	50	ankyrin binding	MF	0.9999999999	0.9999999999	MF ankyrin binding
+GO:0045295	0.997753474341169	0.0126695628422701	2	20	gamma-catenin binding	MF	0.9999999999	0.9999999999	MF gamma-catenin binding
+GO:0005078	0.997133523556013	0.0127156860683287	3	23	MAP-kinase scaffold activity	MF	0.9999999999	0.9999999999	MF MAP-kinase scaffold activity
+GO:0045648	0.99542979102679	0.0128828408862883	7	41	positive regulation of erythrocyte differentiation	BP	0.9999999999	0.9999999999	BP positive regulation of erythrocyte differentiation
+GO:0006998	0.997749859743746	0.0131307849082809	2	17	nuclear envelope organization	BP	0.9999999999	0.9999999999	BP nuclear envelope organization
+GO:0021817	1	0.0131452967680431	0	8	nucleokinesis involved in cell motility in cerebral cortex radial glia guided migration	BP	0.9999999999	0.9999999999	BP nucleokinesis involved in cell motility in cerebral cortex radial glia guided migration
+GO:0001778	0.997596578477863	0.013191407659593	2	22	plasma membrane repair	BP	0.9999999999	0.9999999999	BP plasma membrane repair
+GO:0007613	0.993250499460609	0.0133719940477468	18	79	memory	BP	0.9999999999	0.9999999999	BP memory
+GO:0021591	0.995302864331756	0.0134243982526699	7	37	ventricular system development	BP	0.9999999999	0.9999999999	BP ventricular system development
+GO:0032836	0.998530513875448	0.0136831253546576	1	14	glomerular basement membrane development	BP	0.9999999999	0.9999999999	BP glomerular basement membrane development
+GO:0051660	1	0.0137247356623001	0	10	establishment of centrosome localization	BP	0.9999999999	0.9999999999	BP establishment of centrosome localization
+GO:0050908	0.998523804614026	0.0137348790679622	1	14	detection of light stimulus involved in visual perception	BP	0.9999999999	0.9999999999	BP detection of light stimulus involved in visual perception
+GO:0044782	0.997509033593129	0.0139728992304758	2	19	cilium organization	BP	0.9999999999	0.9999999999	BP cilium organization
+GO:0098684	0.996028505204998	0.0142566762613166	4	32	photoreceptor ribbon synapse	CC	0.9999999999	0.9999999999	CC photoreceptor ribbon synapse
+GO:0008045	0.993935994014227	0.0144860972358156	10	54	motor neuron axon guidance	BP	0.9999999999	0.9999999999	BP motor neuron axon guidance
+GO:0008092	0.992081907066164	0.014521313515747	23	95	cytoskeletal protein binding	MF	0.9999999999	0.9999999999	MF cytoskeletal protein binding
+GO:0000244	0.998381236231407	0.0148242851501879	1	14	spliceosomal tri-snRNP complex assembly	BP	0.9999999999	0.9999999999	BP spliceosomal tri-snRNP complex assembly
+GO:0031258	0.99508084633877	0.0148463107119072	6	34	lamellipodium membrane	CC	0.9999999999	0.9999999999	CC lamellipodium membrane
+GO:0060088	0.995907484170658	0.0149504319938762	4	28	auditory receptor cell stereocilium organization	BP	0.9999999999	0.9999999999	BP auditory receptor cell stereocilium organization
+GO:0050966	1	0.0149553112840013	0	11	detection of mechanical stimulus involved in sensory perception of pain	BP	0.9999999999	0.9999999999	BP detection of mechanical stimulus involved in sensory perception of pain
+GO:0098742	0.994223730973044	0.0150347682873155	8	46	cell-cell adhesion via plasma-membrane adhesion molecules	BP	0.9999999999	0.9999999999	BP cell-cell adhesion via plasma-membrane adhesion molecules
+GO:0043044	0.992770513641807	0.0152593328526836	14	68	ATP-dependent chromatin remodeling	BP	0.9999999999	0.9999999999	BP ATP-dependent chromatin remodeling
+GO:0030334	0.990665650943837	0.0154917981388593	33	131	regulation of cell migration	BP	0.9999999999	0.9999999999	BP regulation of cell migration
+GO:0043517	1	0.0155599243253002	0	9	positive regulation of DNA damage response, signal transduction by p53 class mediator	BP	0.9999999999	0.9999999999	BP positive regulation of DNA damage response, signal transduction by p53 class mediator
+GO:0035583	1	0.0156036148750982	0	8	sequestering of TGFbeta in extracellular matrix	BP	0.9999999999	0.9999999999	BP sequestering of TGFbeta in extracellular matrix
+GO:0008306	0.996344707348555	0.015677871585743	3	23	associative learning	BP	0.9999999999	0.9999999999	BP associative learning
+GO:0015629	0.988568588355049	0.0158843443853475	83	286	actin cytoskeleton	CC	0.9999999999	0.9999999999	CC actin cytoskeleton
+GO:0034629	0.998197282183078	0.015972473258655	1	15	cellular protein complex localization	BP	0.9999999999	0.9999999999	BP cellular protein complex localization
+GO:0036396	0.998185233829628	0.0160607970851398	1	15	RNA N6-methyladenosine methyltransferase complex	CC	0.9999999999	0.9999999999	CC RNA N6-methyladenosine methyltransferase complex
+GO:0005814	0.98918118487447	0.0163904023197917	52	176	centriole	CC	0.9999999999	0.9999999999	CC centriole
+GO:0090316	0.993048091610963	0.0166620205796926	10	48	positive regulation of intracellular protein transport	BP	0.9999999999	0.9999999999	BP positive regulation of intracellular protein transport
+GO:0050953	1	0.0167359797085577	0	9	sensory perception of light stimulus	BP	0.9999999999	0.9999999999	BP sensory perception of light stimulus
+GO:0048568	0.992379720492749	0.0168976816213258	12	58	embryonic organ development	BP	0.9999999999	0.9999999999	BP embryonic organ development
+GO:0003916	1	0.01705309350439	0	10	DNA topoisomerase activity	MF	0.9999999999	0.9999999999	MF DNA topoisomerase activity
+GO:0031932	0.998079370348848	0.017071878449523	1	14	TORC2 complex	CC	0.9999999999	0.9999999999	CC TORC2 complex
+GO:0009898	0.99185604419031	0.017142824068019	14	64	cytoplasmic side of plasma membrane	CC	0.9999999999	0.9999999999	CC cytoplasmic side of plasma membrane
+GO:2001137	1	0.0172941519879957	0	10	positive regulation of endocytic recycling	BP	0.9999999999	0.9999999999	BP positive regulation of endocytic recycling
+GO:0008652	1	0.0173360317574562	0	9	cellular amino acid biosynthetic process	BP	0.9999999999	0.9999999999	BP cellular amino acid biosynthetic process
+GO:0000395	1	0.0174150543951429	0	10	mRNA 5'-splice site recognition	BP	0.9999999999	0.9999999999	BP mRNA 5'-splice site recognition
+GO:0045899	1	0.0175213579899877	0	9	positive regulation of RNA polymerase II transcriptional preinitiation complex assembly	BP	0.9999999999	0.9999999999	BP positive regulation of RNA polymerase II transcriptional preinitiation complex assembly
+GO:0001085	0.990743520780633	0.0177824478597224	18	83	RNA polymerase II transcription factor binding	MF	0.9999999999	0.9999999999	MF RNA polymerase II transcription factor binding
+GO:0035855	0.993833361949982	0.0178151721194133	6	38	megakaryocyte development	BP	0.9999999999	0.9999999999	BP megakaryocyte development
+GO:0035493	0.997909759394317	0.0178335029493894	1	16	SNARE complex assembly	BP	0.9999999999	0.9999999999	BP SNARE complex assembly
+GO:0051601	1	0.0178872200285348	0	11	exocyst localization	BP	0.9999999999	0.9999999999	BP exocyst localization
+GO:0060710	0.997880393732672	0.0182596575229227	1	15	chorio-allantoic fusion	BP	0.9999999999	0.9999999999	BP chorio-allantoic fusion
+GO:2000178	0.996423953791897	0.0187969283365837	2	20	negative regulation of neural precursor cell proliferation	BP	0.9999999999	0.9999999999	BP negative regulation of neural precursor cell proliferation
+GO:0032391	0.993566485348187	0.0189070683379876	6	33	photoreceptor connecting cilium	CC	0.9999999999	0.9999999999	CC photoreceptor connecting cilium
+GO:0060765	0.995226594910804	0.0194334185763208	3	25	regulation of androgen receptor signaling pathway	BP	0.9999999999	0.9999999999	BP regulation of androgen receptor signaling pathway
+GO:0007409	0.988155627955143	0.0195462779735424	32	124	axonogenesis	BP	0.9999999999	0.9999999999	BP axonogenesis
+GO:0021762	0.99773355762089	0.0195622505713227	1	14	substantia nigra development	BP	0.9999999999	0.9999999999	BP substantia nigra development
+GO:0035257	0.990403609230766	0.019793202950831	14	67	nuclear hormone receptor binding	MF	0.9999999999	0.9999999999	MF nuclear hormone receptor binding
+GO:0043266	1	0.0200078580158808	0	9	regulation of potassium ion transport	BP	0.9999999999	0.9999999999	BP regulation of potassium ion transport
+GO:0022008	0.989286577511449	0.0201703603461082	19	82	neurogenesis	BP	0.9999999999	0.9999999999	BP neurogenesis
+GO:0021537	0.993528306492243	0.0203093130441483	5	31	telencephalon development	BP	0.9999999999	0.9999999999	BP telencephalon development
+GO:0051384	0.992387901757205	0.0204351289730251	7	39	response to glucocorticoid	BP	0.9999999999	0.9999999999	BP response to glucocorticoid
+GO:0030017	0.990847470711586	0.0206376697676382	11	52	sarcomere	CC	0.9999999999	0.9999999999	CC sarcomere
+GO:0001502	0.994046465053854	0.0208288712696777	4	27	cartilage condensation	BP	0.9999999999	0.9999999999	BP cartilage condensation
+GO:0033691	0.997474073253663	0.0208511608091489	1	16	sialic acid binding	MF	0.9999999999	0.9999999999	MF sialic acid binding
+GO:0001508	0.995987250365224	0.0209060018342456	2	19	action potential	BP	0.9999999999	0.9999999999	BP action potential
+GO:0042307	0.989321555185696	0.0212393049989762	15	75	positive regulation of protein import into nucleus	BP	0.9999999999	0.9999999999	BP positive regulation of protein import into nucleus
+GO:0031527	0.993344263795481	0.0213281794187578	5	27	filopodium membrane	CC	0.9999999999	0.9999999999	CC filopodium membrane
+GO:0045773	0.989432567171476	0.0216868344712008	14	65	positive regulation of axon extension	BP	0.9999999999	0.9999999999	BP positive regulation of axon extension
+GO:0001540	0.988757304880107	0.0216965157932051	17	76	amyloid-beta binding	MF	0.9999999999	0.9999999999	MF amyloid-beta binding
+GO:0021861	1	0.0217069869401599	0	10	forebrain radial glial cell differentiation	BP	0.9999999999	0.9999999999	BP forebrain radial glial cell differentiation
+GO:0016407	0.992245988757776	0.0217299273895133	6	39	acetyltransferase activity	MF	0.9999999999	0.9999999999	MF acetyltransferase activity
+GO:0022027	0.997525839639345	0.0217481103177649	1	12	interkinetic nuclear migration	BP	0.9999999999	0.9999999999	BP interkinetic nuclear migration
+GO:0060294	0.997499018884694	0.0219394001226949	1	12	cilium movement involved in cell motility	BP	0.9999999999	0.9999999999	BP cilium movement involved in cell motility
+GO:0001895	0.997383530064699	0.022005568732435	1	14	retina homeostasis	BP	0.9999999999	0.9999999999	BP retina homeostasis
+GO:0030198	0.98489393487628	0.0221302084503236	56	193	extracellular matrix organization	BP	0.9999999999	0.9999999999	BP extracellular matrix organization
+GO:0060041	0.987644302437343	0.0223785989884002	21	90	retina development in camera-type eye	BP	0.9999999999	0.9999999999	BP retina development in camera-type eye
+GO:0014704	0.989792011859716	0.0228293658617564	11	51	intercalated disc	CC	0.9999999999	0.9999999999	CC intercalated disc
+GO:0002142	1	0.0229104464628961	0	9	stereocilia ankle link complex	CC	0.9999999999	0.9999999999	CC stereocilia ankle link complex
+GO:0097026	1	0.0229875241875025	0	10	dendritic cell dendrite assembly	BP	0.9999999999	0.9999999999	BP dendritic cell dendrite assembly
+GO:0003341	0.989891487647164	0.0229885095560813	11	46	cilium movement	BP	0.9999999999	0.9999999999	BP cilium movement
+GO:0017162	0.997217588784432	0.0231400087128512	1	14	aryl hydrocarbon receptor binding	MF	0.9999999999	0.9999999999	MF aryl hydrocarbon receptor binding
+GO:0035987	0.990975988360969	0.0231406220597947	8	37	endodermal cell differentiation	BP	0.9999999999	0.9999999999	BP endodermal cell differentiation
+GO:0071320	0.989188263831099	0.0232423706251367	12	57	cellular response to cAMP	BP	0.9999999999	0.9999999999	BP cellular response to cAMP
+GO:0048170	1	0.0232814043871353	0	9	positive regulation of long-term neuronal synaptic plasticity	BP	0.9999999999	0.9999999999	BP positive regulation of long-term neuronal synaptic plasticity
+GO:0060079	0.991733627603522	0.0234486989989495	6	34	excitatory postsynaptic potential	BP	0.9999999999	0.9999999999	BP excitatory postsynaptic potential
+GO:0001533	0.99716953322719	0.0234658807524908	1	14	cornified envelope	CC	0.9999999999	0.9999999999	CC cornified envelope
+GO:0070382	0.994067987171553	0.0237287219248668	3	23	exocytic vesicle	CC	0.9999999999	0.9999999999	CC exocytic vesicle
+GO:0099061	0.989425381783348	0.0241414405081263	10	50	integral component of postsynaptic density membrane	CC	0.9999999999	0.9999999999	CC integral component of postsynaptic density membrane
+GO:1900364	1	0.0245738549088085	0	8	negative regulation of mRNA polyadenylation	BP	0.9999999999	0.9999999999	BP negative regulation of mRNA polyadenylation
+GO:0048511	0.984613459201832	0.0246426464203391	33	136	rhythmic process	BP	0.9999999999	0.9999999999	BP rhythmic process
+GO:0071625	0.996983879055863	0.0247141838886905	1	14	vocalization behavior	BP	0.9999999999	0.9999999999	BP vocalization behavior
+GO:0035060	0.996879945900813	0.0250819911020335	1	15	brahma complex	CC	0.9999999999	0.9999999999	CC brahma complex
+GO:0008016	0.991633279085183	0.0252817837396385	5	32	regulation of heart contraction	BP	0.9999999999	0.9999999999	BP regulation of heart contraction
+GO:0070966	1	0.0253645122805457	0	9	nuclear-transcribed mRNA catabolic process, no-go decay	BP	0.9999999999	0.9999999999	BP nuclear-transcribed mRNA catabolic process, no-go decay
+GO:0065003	0.983850693125895	0.0254981226264794	36	136	macromolecular complex assembly	BP	0.9999999999	0.9999999999	BP macromolecular complex assembly
+GO:0000785	0.982105716841296	0.0257872308689591	57	207	chromatin	CC	0.9999999999	0.9999999999	CC chromatin
+GO:1900745	0.98992741351633	0.0262727734327312	7	38	positive regulation of p38MAPK cascade	BP	0.9999999999	0.9999999999	BP positive regulation of p38MAPK cascade
+GO:0099635	1	0.0262799770554393	0	8	voltage-gated calcium channel activity involved in positive regulation of presynaptic cytosolic calcium levels	MF	0.9999999999	0.9999999999	MF voltage-gated calcium channel activity involved in positive regulation of presynaptic cytosolic calcium levels
+GO:0021772	0.991398037787007	0.0263041497841254	5	29	olfactory bulb development	BP	0.9999999999	0.9999999999	BP olfactory bulb development
+GO:0014737	1	0.0264023437995053	0	10	positive regulation of muscle atrophy	BP	0.9999999999	0.9999999999	BP positive regulation of muscle atrophy
+GO:0046972	1	0.0264926594639789	0	8	histone acetyltransferase activity (H4-K16 specific)	MF	0.9999999999	0.9999999999	MF histone acetyltransferase activity (H4-K16 specific)
+GO:0001818	1	0.0266939765772837	0	10	negative regulation of cytokine production	BP	0.9999999999	0.9999999999	BP negative regulation of cytokine production
+GO:0043923	0.990212816398098	0.0267616684666105	6	38	positive regulation by host of viral transcription	BP	0.9999999999	0.9999999999	BP positive regulation by host of viral transcription
+GO:2000391	1	0.0268632690531482	0	8	positive regulation of neutrophil extravasation	BP	0.9999999999	0.9999999999	BP positive regulation of neutrophil extravasation
+GO:0036035	1	0.0268816559405217	0	8	osteoclast development	BP	0.9999999999	0.9999999999	BP osteoclast development
+GO:0006623	0.992247656955781	0.026913796910461	4	23	protein targeting to vacuole	BP	0.9999999999	0.9999999999	BP protein targeting to vacuole
+GO:0018393	0.993073697190445	0.027072170481165	3	23	internal peptidyl-lysine acetylation	BP	0.9999999999	0.9999999999	BP internal peptidyl-lysine acetylation
+GO:0022407	0.993117353665951	0.0271323421602258	3	22	regulation of cell-cell adhesion	BP	0.9999999999	0.9999999999	BP regulation of cell-cell adhesion
+GO:0045887	1	0.0272115921900775	0	9	positive regulation of synaptic growth at neuromuscular junction	BP	0.9999999999	0.9999999999	BP positive regulation of synaptic growth at neuromuscular junction
+GO:0007129	0.990989937984735	0.0272317251460268	5	30	synapsis	BP	0.9999999999	0.9999999999	BP synapsis
+GO:1900273	0.99184013669489	0.027503521309377	4	26	positive regulation of long-term synaptic potentiation	BP	0.9999999999	0.9999999999	BP positive regulation of long-term synaptic potentiation
+GO:0030326	0.987826283519297	0.0277002616035314	10	46	embryonic limb morphogenesis	BP	0.9999999999	0.9999999999	BP embryonic limb morphogenesis
+GO:0048661	0.986897417525158	0.0277006338017097	12	56	positive regulation of smooth muscle cell proliferation	BP	0.9999999999	0.9999999999	BP positive regulation of smooth muscle cell proliferation
+GO:0050808	0.984383029928235	0.0278277975362067	21	88	synapse organization	BP	0.9999999999	0.9999999999	BP synapse organization
+GO:0042975	0.988887882026533	0.028261607018634	7	42	peroxisome proliferator activated receptor binding	MF	0.9999999999	0.9999999999	MF peroxisome proliferator activated receptor binding
+GO:0030177	0.987411931616966	0.0283691554705109	10	48	positive regulation of Wnt signaling pathway	BP	0.9999999999	0.9999999999	BP positive regulation of Wnt signaling pathway
+GO:0010838	1	0.0284926343014434	0	8	positive regulation of keratinocyte proliferation	BP	0.9999999999	0.9999999999	BP positive regulation of keratinocyte proliferation
+GO:0071539	0.99069783500325	0.028500189555977	5	27	protein localization to centrosome	BP	0.9999999999	0.9999999999	BP protein localization to centrosome
+GO:0022038	0.994503471357387	0.028520065966474	2	15	corpus callosum development	BP	0.9999999999	0.9999999999	BP corpus callosum development
+GO:0090160	0.996537101657734	0.0285451422707838	1	12	Golgi to lysosome transport	BP	0.9999999999	0.9999999999	BP Golgi to lysosome transport
+GO:0051015	0.978619170567204	0.0286430551005567	90	297	actin filament binding	MF	0.9999999999	0.9999999999	MF actin filament binding
+GO:0001974	0.988819506224479	0.0286951968007096	7	39	blood vessel remodeling	BP	0.9999999999	0.9999999999	BP blood vessel remodeling
+GO:0007254	0.987183441545555	0.0289121828450196	10	47	JNK cascade	BP	0.9999999999	0.9999999999	BP JNK cascade
+GO:1900006	0.994148710828159	0.0289453383418217	2	18	positive regulation of dendrite development	BP	0.9999999999	0.9999999999	BP positive regulation of dendrite development
+GO:0043584	0.996326798967093	0.029009582203013	1	14	nose development	BP	0.9999999999	0.9999999999	BP nose development
+GO:0008569	0.990665516789303	0.0292555604926551	5	24	ATP-dependent microtubule motor activity, minus-end-directed	MF	0.9999999999	0.9999999999	MF ATP-dependent microtubule motor activity, minus-end-directed
+GO:0010880	0.992313937957787	0.0295713067251709	3	23	regulation of release of sequestered calcium ion into cytosol by sarcoplasmic reticulum	BP	0.9999999999	0.9999999999	BP regulation of release of sequestered calcium ion into cytosol by sarcoplasmic reticulum
+GO:0035608	1	0.0296735866455058	0	8	protein deglutamylation	BP	0.9999999999	0.9999999999	BP protein deglutamylation
+GO:0060411	0.993898455084987	0.0296909264668529	2	19	cardiac septum morphogenesis	BP	0.9999999999	0.9999999999	BP cardiac septum morphogenesis
+GO:0071407	0.985385581527442	0.0297538291625095	13	61	cellular response to organic cyclic compound	BP	0.9999999999	0.9999999999	BP cellular response to organic cyclic compound
+GO:0042769	0.991082698347215	0.0298752891684645	4	25	DNA damage response, detection of DNA damage	BP	0.9999999999	0.9999999999	BP DNA damage response, detection of DNA damage
+GO:1904637	1	0.02993700578896	0	9	cellular response to ionomycin	BP	0.9999999999	0.9999999999	BP cellular response to ionomycin
+GO:0007271	0.996152183687851	0.0301222174579833	1	14	synaptic transmission, cholinergic	BP	0.9999999999	0.9999999999	BP synaptic transmission, cholinergic
+GO:0046849	0.990789915616782	0.0301634783479702	4	28	bone remodeling	BP	0.9999999999	0.9999999999	BP bone remodeling
+GO:0071565	0.987993795305414	0.0304475736094096	7	40	nBAF complex	CC	0.9999999999	0.9999999999	CC nBAF complex
+GO:0007158	0.992109214856696	0.0304612133159389	3	22	neuron cell-cell adhesion	BP	0.9999999999	0.9999999999	BP neuron cell-cell adhesion
+GO:0042157	0.988840977324789	0.030625094808262	6	33	lipoprotein metabolic process	BP	0.9999999999	0.9999999999	BP lipoprotein metabolic process
+GO:0036156	0.996423685122266	0.0306397188324059	1	10	inner dynein arm	CC	0.9999999999	0.9999999999	CC inner dynein arm
+GO:0010807	1	0.0309197832809489	0	8	regulation of synaptic vesicle priming	BP	0.9999999999	0.9999999999	BP regulation of synaptic vesicle priming
+GO:0001553	0.996133638053487	0.0311905329825473	1	12	luteinization	BP	0.9999999999	0.9999999999	BP luteinization
+GO:0061484	1	0.0312624242266046	0	9	hematopoietic stem cell homeostasis	BP	0.9999999999	0.9999999999	BP hematopoietic stem cell homeostasis
+GO:0016055	0.977286534749434	0.0312671309673095	72	246	Wnt signaling pathway	BP	0.9999999999	0.9999999999	BP Wnt signaling pathway
+GO:0043922	1	0.031272755371646	0	9	negative regulation by host of viral transcription	BP	0.9999999999	0.9999999999	BP negative regulation by host of viral transcription
+GO:0031022	1	0.0316516193441069	0	6	nuclear migration along microfilament	BP	0.9999999999	0.9999999999	BP nuclear migration along microfilament
+GO:0001956	0.995978198352549	0.0316635424055566	1	13	positive regulation of neurotransmitter secretion	BP	0.9999999999	0.9999999999	BP positive regulation of neurotransmitter secretion
+GO:0010942	0.986268753060095	0.0316762261911347	9	45	positive regulation of cell death	BP	0.9999999999	0.9999999999	BP positive regulation of cell death
+GO:0101005	0.993284652992191	0.0318930770705724	2	20	ubiquitinyl hydrolase activity	MF	0.9999999999	0.9999999999	MF ubiquitinyl hydrolase activity
+GO:0007099	0.991886708587608	0.0320472568368149	3	19	centriole replication	BP	0.9999999999	0.9999999999	BP centriole replication
+GO:0005509	0.973196348175182	0.0321485468377898	230	730	calcium ion binding	MF	0.9999999999	0.9999999999	MF calcium ion binding
+GO:0016620	1	0.0322730126284596	0	8	oxidoreductase activity, acting on the aldehyde or oxo group of donors, NAD or NADP as acceptor	MF	0.9999999999	0.9999999999	MF oxidoreductase activity, acting on the aldehyde or oxo group of donors, NAD or NADP as acceptor
+GO:0098797	0.995961946248445	0.0322972256305394	1	12	plasma membrane protein complex	CC	0.9999999999	0.9999999999	CC plasma membrane protein complex
+GO:0009636	0.981326254414965	0.0325184669094655	22	89	response to toxic substance	BP	0.9999999999	0.9999999999	BP response to toxic substance
+GO:0005544	0.986410132848466	0.0327002337421422	8	41	calcium-dependent phospholipid binding	MF	0.9999999999	0.9999999999	MF calcium-dependent phospholipid binding
+GO:0031018	0.993193365649351	0.0328185527332255	2	18	endocrine pancreas development	BP	0.9999999999	0.9999999999	BP endocrine pancreas development
+GO:0043025	0.973406365825575	0.0328445010848296	167	541	neuronal cell body	CC	0.9999999999	0.9999999999	CC neuronal cell body
+GO:0005915	0.991532230073793	0.0328864956688581	3	20	zonula adherens	CC	0.9999999999	0.9999999999	CC zonula adherens
+GO:0045654	0.995625111010642	0.0334162763913495	1	14	positive regulation of megakaryocyte differentiation	BP	0.9999999999	0.9999999999	BP positive regulation of megakaryocyte differentiation
+GO:0010745	0.99569243017073	0.0334623911814913	1	13	negative regulation of macrophage derived foam cell differentiation	BP	0.9999999999	0.9999999999	BP negative regulation of macrophage derived foam cell differentiation
+GO:0009888	0.984819995110292	0.0338208335561121	10	45	tissue development	BP	0.9999999999	0.9999999999	BP tissue development
+GO:0016514	0.984512579272834	0.0338661707590957	10	51	SWI/SNF complex	CC	0.9999999999	0.9999999999	CC SWI/SNF complex
+GO:0035577	0.986696245860473	0.0341168041903079	7	34	azurophil granule membrane	CC	0.9999999999	0.9999999999	CC azurophil granule membrane
+GO:0007218	0.983649226615194	0.0342912656209311	11	58	neuropeptide signaling pathway	BP	0.9999999999	0.9999999999	BP neuropeptide signaling pathway
+GO:0034446	0.983923701547721	0.0344780431742002	11	49	substrate adhesion-dependent cell spreading	BP	0.9999999999	0.9999999999	BP substrate adhesion-dependent cell spreading
+GO:0005588	1	0.0346686047851692	0	7	collagen type V trimer	CC	0.9999999999	0.9999999999	CC collagen type V trimer
+GO:0032092	0.979998057671052	0.0346758020502808	22	88	positive regulation of protein binding	BP	0.9999999999	0.9999999999	BP positive regulation of protein binding
+GO:0099560	0.987020882973297	0.0347770454815935	6	34	synaptic membrane adhesion	BP	0.9999999999	0.9999999999	BP synaptic membrane adhesion
+GO:0005516	0.974173298627138	0.0349794409199103	78	259	calmodulin binding	MF	0.9999999999	0.9999999999	MF calmodulin binding
+GO:0000902	0.978023035714227	0.0351486012747343	31	115	cell morphogenesis	BP	0.9999999999	0.9999999999	BP cell morphogenesis
+GO:0035845	0.99300360532941	0.0353293354148924	2	14	photoreceptor cell outer segment organization	BP	0.9999999999	0.9999999999	BP photoreceptor cell outer segment organization
+GO:0046339	0.992864692206802	0.0353501044952069	2	15	diacylglycerol metabolic process	BP	0.9999999999	0.9999999999	BP diacylglycerol metabolic process
+GO:0031424	0.992547245043965	0.0353773419040629	2	18	keratinization	BP	0.9999999999	0.9999999999	BP keratinization
+GO:0001750	0.981286057219859	0.0355308603253402	16	65	photoreceptor outer segment	CC	0.9999999999	0.9999999999	CC photoreceptor outer segment
+GO:0005858	0.993102722986011	0.0355636789674607	2	13	axonemal dynein complex	CC	0.9999999999	0.9999999999	CC axonemal dynein complex
+GO:0007165	0.969614659607377	0.0358879623756333	268	831	signal transduction	BP	0.9999999999	0.9999999999	BP signal transduction
+GO:0046959	1	0.0359516690632791	0	6	habituation	BP	0.9999999999	0.9999999999	BP habituation
+GO:0003724	0.978708858629623	0.036140534412295	24	91	RNA helicase activity	MF	0.9999999999	0.9999999999	MF RNA helicase activity
+GO:0070268	0.990415219599012	0.0361738514496993	3	21	cornification	BP	0.9999999999	0.9999999999	BP cornification
+GO:0007040	0.981708035553538	0.0364977560820079	14	54	lysosome organization	BP	0.9999999999	0.9999999999	BP lysosome organization
+GO:1990405	0.992250810953221	0.0365363901623988	2	18	protein antigen binding	MF	0.9999999999	0.9999999999	MF protein antigen binding
+GO:0036268	0.995009712804739	0.0367252060014391	1	15	swimming	BP	0.9999999999	0.9999999999	BP swimming
+GO:0036309	1	0.0373479395071832	0	7	protein localization to M-band	BP	0.9999999999	0.9999999999	BP protein localization to M-band
+GO:0072344	1	0.0375610288179978	0	7	rescue of stalled ribosome	BP	0.9999999999	0.9999999999	BP rescue of stalled ribosome
+GO:0007413	0.9871726577539	0.037579640557254	5	27	axonal fasciculation	BP	0.9999999999	0.9999999999	BP axonal fasciculation
+GO:0006990	0.994856789713186	0.0376296904750326	1	15	positive regulation of transcription from RNA polymerase II promoter involved in unfolded protein response	BP	0.9999999999	0.9999999999	BP positive regulation of transcription from RNA polymerase II promoter involved in unfolded protein response
+GO:0050896	0.98202914494671	0.037878657039419	11	51	response to stimulus	BP	0.9999999999	0.9999999999	BP response to stimulus
+GO:0042297	0.994958349925493	0.0379653488532883	1	13	vocal learning	BP	0.9999999999	0.9999999999	BP vocal learning
+GO:0006265	0.992033490553127	0.0381874920540312	2	16	DNA topological change	BP	0.9999999999	0.9999999999	BP DNA topological change
+GO:0032611	0.994914692541756	0.0382282297162277	1	13	interleukin-1 beta production	BP	0.9999999999	0.9999999999	BP interleukin-1 beta production
+GO:0043588	0.981062245487616	0.0382406260969783	13	53	skin development	BP	0.9999999999	0.9999999999	BP skin development
+GO:0034113	0.991768482488482	0.0384035260101959	2	18	heterotypic cell-cell adhesion	BP	0.9999999999	0.9999999999	BP heterotypic cell-cell adhesion
+GO:1902856	1	0.0384093437510886	0	8	negative regulation of non-motile cilium assembly	BP	0.9999999999	0.9999999999	BP negative regulation of non-motile cilium assembly
+GO:0032420	0.983043262333861	0.0384168930759445	9	43	stereocilium	CC	0.9999999999	0.9999999999	CC stereocilium
+GO:0031641	0.986744968845038	0.0384208258567164	5	28	regulation of myelination	BP	0.9999999999	0.9999999999	BP regulation of myelination
+GO:0048745	0.988015375559691	0.0384442103268758	4	25	smooth muscle tissue development	BP	0.9999999999	0.9999999999	BP smooth muscle tissue development
+GO:0071385	0.99180503217169	0.0386447802772398	2	17	cellular response to glucocorticoid stimulus	BP	0.9999999999	0.9999999999	BP cellular response to glucocorticoid stimulus
+GO:0001666	0.972540375931185	0.0387019499537105	57	203	response to hypoxia	BP	0.9999999999	0.9999999999	BP response to hypoxia
+GO:0060325	0.980043868406582	0.0387668097822593	14	62	face morphogenesis	BP	0.9999999999	0.9999999999	BP face morphogenesis
+GO:1903385	1	0.0388061503846297	0	8	regulation of homophilic cell adhesion	BP	0.9999999999	0.9999999999	BP regulation of homophilic cell adhesion
+GO:0035197	1	0.0389199242519405	0	8	siRNA binding	MF	0.9999999999	0.9999999999	MF siRNA binding
+GO:0016342	0.984361207475832	0.0389489863474704	7	36	catenin complex	CC	0.9999999999	0.9999999999	CC catenin complex
+GO:1901224	0.978789119458587	0.0393932719283351	16	71	positive regulation of NIK/NF-kappaB signaling	BP	0.9999999999	0.9999999999	BP positive regulation of NIK/NF-kappaB signaling
+GO:0031594	0.974852922258473	0.0396954007890957	31	119	neuromuscular junction	CC	0.9999999999	0.9999999999	CC neuromuscular junction
+GO:0043201	1	0.0398973481369024	0	8	response to leucine	BP	0.9999999999	0.9999999999	BP response to leucine
+GO:0042383	0.973514916536203	0.0399220141890231	39	143	sarcolemma	CC	0.9999999999	0.9999999999	CC sarcolemma
+GO:0045211	0.971908287490673	0.0400135608101076	53	189	postsynaptic membrane	CC	0.9999999999	0.9999999999	CC postsynaptic membrane
+GO:0042060	0.976474784746869	0.0400807993556751	23	86	wound healing	BP	0.9999999999	0.9999999999	BP wound healing
+GO:0009414	0.994688201157459	0.0402046196128096	1	12	response to water deprivation	BP	0.9999999999	0.9999999999	BP response to water deprivation
+GO:0005537	0.991482356991657	0.0403405193107704	2	16	mannose binding	MF	0.9999999999	0.9999999999	MF mannose binding
+GO:0048666	0.976585503166142	0.0404285100048206	21	86	neuron development	BP	0.9999999999	0.9999999999	BP neuron development
+GO:0009986	0.96699163515518	0.0406607699658979	159	513	cell surface	CC	0.9999999999	0.9999999999	CC cell surface
+GO:0002064	0.991391139010309	0.0406940344623077	2	16	epithelial cell development	BP	0.9999999999	0.9999999999	BP epithelial cell development
+GO:0015347	1	0.0417225607244793	0	7	sodium-independent organic anion transmembrane transporter activity	MF	0.9999999999	0.9999999999	MF sodium-independent organic anion transmembrane transporter activity
+GO:0001771	0.994222531685204	0.0417834840758453	1	14	immunological synapse formation	BP	0.9999999999	0.9999999999	BP immunological synapse formation
+GO:0008046	0.988383461896719	0.0421793645393804	3	22	axon guidance receptor activity	MF	0.9999999999	0.9999999999	MF axon guidance receptor activity
+GO:0007288	0.985310198666169	0.0422075992267082	5	27	sperm axoneme assembly	BP	0.9999999999	0.9999999999	BP sperm axoneme assembly
+GO:0031210	0.984122397984659	0.0422133786356551	6	30	phosphatidylcholine binding	MF	0.9999999999	0.9999999999	MF phosphatidylcholine binding
+GO:0001966	0.990651979041922	0.0422805064048007	2	19	thigmotaxis	BP	0.9999999999	0.9999999999	BP thigmotaxis
+GO:0007512	0.984886733346824	0.0423594061035057	5	31	adult heart development	BP	0.9999999999	0.9999999999	BP adult heart development
+GO:0004532	1	0.0423803810704894	0	8	exoribonuclease activity	MF	0.9999999999	0.9999999999	MF exoribonuclease activity
+GO:0043687	0.971012487045352	0.042498157628273	44	160	post-translational protein modification	BP	0.9999999999	0.9999999999	BP post-translational protein modification
+GO:0043129	1	0.042602628311051	0	8	surfactant homeostasis	BP	0.9999999999	0.9999999999	BP surfactant homeostasis
+GO:1900452	1	0.0428283858364288	0	7	regulation of long term synaptic depression	BP	0.9999999999	0.9999999999	BP regulation of long term synaptic depression
+GO:0097435	0.99434040467469	0.0430623787179155	1	11	supramolecular fiber organization	BP	0.9999999999	0.9999999999	BP supramolecular fiber organization
+GO:0045190	0.990705375790853	0.0433273161250958	2	16	isotype switching	BP	0.9999999999	0.9999999999	BP isotype switching
+GO:0004143	0.990783850471191	0.0435738299678701	2	15	diacylglycerol kinase activity	MF	0.9999999999	0.9999999999	MF diacylglycerol kinase activity
+GO:0031324	1	0.0438439693577995	0	9	negative regulation of cellular metabolic process	BP	0.9999999999	0.9999999999	BP negative regulation of cellular metabolic process
+GO:0060177	1	0.0438439693577995	0	9	regulation of angiotensin metabolic process	BP	0.9999999999	0.9999999999	BP regulation of angiotensin metabolic process
+GO:2000629	1	0.0438439693577995	0	9	negative regulation of miRNA metabolic process	BP	0.9999999999	0.9999999999	BP negative regulation of miRNA metabolic process
+GO:0031325	0.993756836204692	0.0439682318406168	1	15	positive regulation of cellular metabolic process	BP	0.9999999999	0.9999999999	BP positive regulation of cellular metabolic process
+GO:0002934	1	0.0441051275871194	0	7	desmosome organization	BP	0.9999999999	0.9999999999	BP desmosome organization
+GO:0004386	0.976124779546533	0.0442236127490614	17	61	helicase activity	MF	0.9999999999	0.9999999999	MF helicase activity
+GO:0071709	0.993982517124048	0.0443899962599909	1	12	membrane assembly	BP	0.9999999999	0.9999999999	BP membrane assembly
+GO:0016290	0.99398098177135	0.0443989699636539	1	12	palmitoyl-CoA hydrolase activity	MF	0.9999999999	0.9999999999	MF palmitoyl-CoA hydrolase activity
+GO:0006590	0.993974167219216	0.0444387924547413	1	12	thyroid hormone generation	BP	0.9999999999	0.9999999999	BP thyroid hormone generation
+GO:0048625	1	0.0444609594606351	0	8	myoblast fate commitment	BP	0.9999999999	0.9999999999	BP myoblast fate commitment
+GO:0048341	1	0.0444944225020797	0	7	paraxial mesoderm formation	BP	0.9999999999	0.9999999999	BP paraxial mesoderm formation
+GO:0007422	0.982718235564291	0.0447674928239467	6	33	peripheral nervous system development	BP	0.9999999999	0.9999999999	BP peripheral nervous system development
+GO:0035327	0.982925668461471	0.0449416754117084	6	30	transcriptionally active chromatin	CC	0.9999999999	0.9999999999	CC transcriptionally active chromatin
+GO:0036342	0.979481231747706	0.0451853036081159	9	45	post-anal tail morphogenesis	BP	0.9999999999	0.9999999999	BP post-anal tail morphogenesis
+GO:0008188	0.993722119553915	0.0452228584504291	1	13	neuropeptide receptor activity	MF	0.9999999999	0.9999999999	MF neuropeptide receptor activity
+GO:0006959	0.987536850189104	0.0454406466367215	3	20	humoral immune response	BP	0.9999999999	0.9999999999	BP humoral immune response
+GO:0071456	0.971748893602797	0.0459221487322193	26	100	cellular response to hypoxia	BP	0.9999999999	0.9999999999	BP cellular response to hypoxia
+GO:0032532	1	0.0461228479602308	0	7	regulation of microvillus length	BP	0.9999999999	0.9999999999	BP regulation of microvillus length
+GO:0043200	0.981844705226828	0.0467153348025911	6	33	response to amino acid	BP	0.9999999999	0.9999999999	BP response to amino acid
+GO:0051490	1	0.0467912646021663	0	7	negative regulation of filopodium assembly	BP	0.9999999999	0.9999999999	BP negative regulation of filopodium assembly
+GO:0060070	0.972153889627361	0.0469363954570521	22	88	canonical Wnt signaling pathway	BP	0.9999999999	0.9999999999	BP canonical Wnt signaling pathway
+GO:0046321	1	0.046949160385975	0	8	positive regulation of fatty acid oxidation	BP	0.9999999999	0.9999999999	BP positive regulation of fatty acid oxidation
+GO:0099504	1	0.0470323036059278	0	7	synaptic vesicle cycle	BP	0.9999999999	0.9999999999	BP synaptic vesicle cycle
+GO:0032426	0.987124537453175	0.0471160639312039	3	19	stereocilium tip	CC	0.9999999999	0.9999999999	CC stereocilium tip
+GO:0036126	0.976591809746397	0.0472457638277457	12	50	sperm flagellum	CC	0.9999999999	0.9999999999	CC sperm flagellum
+GO:0051018	0.979707101991927	0.047368961480409	8	36	protein kinase A binding	MF	0.9999999999	0.9999999999	MF protein kinase A binding
+GO:0032422	1	0.0473809568381856	0	8	purine-rich negative regulatory element binding	MF	0.9999999999	0.9999999999	MF purine-rich negative regulatory element binding
+GO:1904929	1	0.0474257319122894	0	7	coreceptor activity involved in Wnt signaling pathway, planar cell polarity pathway	MF	0.9999999999	0.9999999999	MF coreceptor activity involved in Wnt signaling pathway, planar cell polarity pathway
+GO:0060412	0.977708218916935	0.0475267833538463	10	45	ventricular septum morphogenesis	BP	0.9999999999	0.9999999999	BP ventricular septum morphogenesis
+GO:0043281	0.993289251745914	0.0476814953244612	1	13	regulation of cysteine-type endopeptidase activity involved in apoptotic process	BP	0.9999999999	0.9999999999	BP regulation of cysteine-type endopeptidase activity involved in apoptotic process
+GO:0048469	0.984542958086465	0.0476992232907364	4	25	cell maturation	BP	0.9999999999	0.9999999999	BP cell maturation
+GO:0006637	0.989472419615437	0.0479613758322497	2	16	acyl-CoA metabolic process	BP	0.9999999999	0.9999999999	BP acyl-CoA metabolic process
+GO:0031435	0.981052852461937	0.0486781849043393	6	32	mitogen-activated protein kinase kinase kinase binding	MF	0.9999999999	0.9999999999	MF mitogen-activated protein kinase kinase kinase binding
+GO:0098534	1	0.0487269315079078	0	8	centriole assembly	BP	0.9999999999	0.9999999999	BP centriole assembly
+GO:0046330	0.970017392196486	0.0489878436366601	25	95	positive regulation of JNK cascade	BP	0.9999999999	0.9999999999	BP positive regulation of JNK cascade
+GO:0002523	0.993168686708453	0.0490730018096629	1	12	leukocyte migration involved in inflammatory response	BP	0.9999999999	0.9999999999	BP leukocyte migration involved in inflammatory response
+GO:0005230	0.989005418779456	0.04916464183453	2	17	extracellular ligand-gated ion channel activity	MF	0.9999999999	0.9999999999	MF extracellular ligand-gated ion channel activity
+GO:0097157	0.985985593774126	0.0493403950546259	3	22	pre-mRNA intronic binding	MF	0.9999999999	0.9999999999	MF pre-mRNA intronic binding
+GO:0030056	0.993388160846041	0.0497212245358441	1	10	hemidesmosome	CC	0.9999999999	0.9999999999	CC hemidesmosome
+GO:0071773	0.979379985648465	0.0497405120792836	7	35	cellular response to BMP stimulus	BP	0.9999999999	0.9999999999	BP cellular response to BMP stimulus
+GO:0099645	0.993178248419577	0.0498819793035113	1	11	neurotransmitter receptor localization to postsynaptic specialization membrane	BP	0.9999999999	0.9999999999	BP neurotransmitter receptor localization to postsynaptic specialization membrane
+GO:2000279	0.993010909284581	0.0499647285428783	1	12	negative regulation of DNA biosynthetic process	BP	0.9999999999	0.9999999999	BP negative regulation of DNA biosynthetic process
+GO:0007274	0.980678475562922	0.0499840502829171	6	30	neuromuscular synaptic transmission	BP	0.9999999999	0.9999999999	BP neuromuscular synaptic transmission
+GO:0043537	0.993006921732869	0.0499872008824465	1	12	negative regulation of blood vessel endothelial cell migration	BP	0.9999999999	0.9999999999	BP negative regulation of blood vessel endothelial cell migration
