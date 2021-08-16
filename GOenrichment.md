@@ -107,6 +107,5 @@ biocLite("qvalue") # that one
 ```
 IS IT THE RIGHT BACKGROUND?
 
-!!!I NEED TO CHECK WHAT IS THE UNIVERSE/BACKGROUND FOR DE GENES
 I save those files in this repository as [results_files/diff.GOseq.depleted](results_files/diff.GOseq.depleted) and [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched)
 
