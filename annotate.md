@@ -34,11 +34,7 @@ makeblastdb --in  uniprot_sprot.pep --db-type prot
 blastx -query Trinity.fasta -db uniprot_sprot.pep -num_threads 8 -max_target_seqs 1 -outfmt 6 -evalue 1e-3 > blastx.outfmt6
 blastp -query Trinity.fasta.transdecoder.pep -db uniprot_sprot.pep -num_threads 8 -max_target_seqs 1 -outfmt 6 -evalue 1e-3 > blastp.outfmt6
 
-# hmm
-gunzip -d Pfam-A.hmm.gz
-hmmpress Pfam-A.hmm
-hmmscan --cpu 4 --domtblout TrinotatePFAM.out Pfam-A.hmm \
-Trinity.fasta.transdecoder.pep > pfgit#Pfam come from Build_Trinotate_Boilerplate_SQLite_db above
+
 ```
 
 
