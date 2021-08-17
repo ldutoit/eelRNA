@@ -1,4 +1,6 @@
-# First trun transdecoder
+# Annotate
+
+### First trun transdecoder
 
 ```bash
 #!/bin/sh
@@ -51,11 +53,4 @@ Trinotate-Trinotate-v3.1.1/Trinotate Trinotate.sqlite report > denovoassembly_an
 
 That is the final assembly report.
 
-I want to add two columns - one that says wether it is expressed passing filter in the differential expression analsyis - one whether it is DE
 
-
-I'll start by adding these two columns:
-
-in bash, I extract the second column of the annotation which is all the isoforms.I do that so I don't have to worry about the formatting of all the other columns which won't fit into R.
-
-x
