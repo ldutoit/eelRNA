@@ -75,7 +75,7 @@ Finish the gene lengths:
 #I create the factor labelling out of the DE analysis genes in the github repos:
 
 ```
- cut -f 1  ~/repos/scripts/eelRNA/DE_results.txt  | tail -n 10348  |  awk '{print "diff\t",$0}' -   >factor_labeling.txt
+ cut -f 2  ~/repos/scripts/eelRNA/results_files/DE_results.txt  | tail -n 10348  |  awk '{print "diff\t",$0}' | sed -s 's/\"//g'    >factor_labeling.txt
 ```
 
  NOTE 10348 because that is the number of DE genes, there is 10349 lines with a header 
@@ -87,13 +87,16 @@ Finish the gene lengths:
 
 ```bash
  conda install -c bioconda bioconductor-goseq 
+
+ module load R/3.4.2-gimkl-2017a
 ```
 
 Then I installed qvalue inside R using:
 
 ```r
 source("http://bioconductor.org/biocLite.R")
-biocLite("qvalue") # that one 
+biocLite("qvalue") # that on
+biocLite("goseq")  
 ```
 
 ## RUN THE GO ANALYSIS:
@@ -104,9 +107,32 @@ biocLite("qvalue") # that one
                        --GO_assignments go_annotations.txt \
                        --lengths Trinity.gene_lengths.txt \
                        --background  backgroundGO.txt
+mv diff.GOseq.depleted  ~/repos/scripts/eelRNA/results_files/allDE.GOseq.depleted 
+mv diff.GOseq.enriched  ~/repos/scripts/eelRNA/results_files/allDE.GOseq.enriched                 
 ```
-IS IT THE RIGHT BACKGROUND?
 
-!!!I NEED TO CHECK WHAT IS THE UNIVERSE/BACKGROUND FOR DE GENES
 I save those files in this repository as [results_files/diff.GOseq.depleted](results_files/diff.GOseq.depleted) and [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched)
 
+**Upregulated only**
+```bash
+cat ~/repos/scripts/eelRNA/upregulated.txt |  awk '{print "diff\t",$0}'    >factor_labelingupregulated.txt
+/opt/nesi/CS400_centos7_bdw/Trinity/2.8.5-gimkl-2018b/trinityrnaseq-Trinity-v2.8.5/Analysis/DifferentialExpression/run_GOseq.pl \
+                       --factor_labeling  factor_labelingupregulated.txt \
+                       --GO_assignments go_annotations.txt \
+                       --lengths Trinity.gene_lengths.txt \
+                       --background  backgroundGO.txt
+mv diff.GOseq.depleted  ~/repos/scripts/eelRNA/results_files/logFCbiggerthan0_diff.GOseq.depleted 
+mv diff.GOseq.enriched  ~/repos/scripts/eelRNA/results_files/logFCbiggerthan0_diff.GOseq.enriched
+
+```
+**down regulated
+```bash
+cat ~/repos/scripts/eelRNA/downregulated.txt |  awk '{print "diff\t",$0}'    >factor_labelingdownregulated.txt
+/opt/nesi/CS400_centos7_bdw/Trinity/2.8.5-gimkl-2018b/trinityrnaseq-Trinity-v2.8.5/Analysis/DifferentialExpression/run_GOseq.pl \
+                       --factor_labeling  factor_labelingdownregulated.txt \
+                       --GO_assignments go_annotations.txt \
+                       --lengths Trinity.gene_lengths.txt \
+                       --background  backgroundGO.txt                       
+mv diff.GOseq.depleted  ~/repos/scripts/eelRNA/results_files/logFClowerthan0_diff.GOseq.depleted 
+mv diff.GOseq.enriched  ~/repos/scripts/eelRNA/results_files/logFClowerthan0_diff.GOseq.enriched
+```

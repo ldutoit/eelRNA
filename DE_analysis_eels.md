@@ -11,6 +11,7 @@ library(DESeq2)
 library(pheatmap)
 library(stringr)
 library(ggplot2)
+library(dplyr)
 library(matrixStats)
 library(pheatmap)
 library(edgeR)
@@ -67,8 +68,6 @@ dge <- DGEList(counts=counts)
 keep <- filterByExpr(counts, des) # inside function of limma aware of the design to remove rad counts
 dge <- dge[keep,keep.lib.sizes=FALSE]
 
-
-
 dge<- calcNormFactors(dge)
 print("After filtering, kept a matrix of X genes by Y samples:")
 ```
@@ -82,44 +81,6 @@ dim(dge)
     ## [1] 32447    12
 
 ### Some visualisation after basic filtering
-
-``` r
-###all counts
-logCounts = log2(as.matrix(counts)+ 0.5)
-boxplot(as.matrix(logCounts) ~ col(logCounts),names=c("s1","s2","s3","s4","s5","s6","y1","y2","y3","y4","y5","y6"),main= "log Raw counts",sub="Y has a lot of transcripts with low counts",main="Counts before filtering")
-```
-
-![](DE_analysis_eels_files/figure-markdown_github/unnamed-chunk-3-1.png)
-
-``` r
-###dge
-logCounts = log2(as.matrix(dge)+ 0.5)
-boxplot(as.matrix(logCounts) ~ col(logCounts),names=c("s1","s2","s3","s4","s5","s6","y1","y2","y3","y4","y5","y6"),main= "log filtered counts")
-```
-
-![](DE_analysis_eels_files/figure-markdown_github/unnamed-chunk-3-2.png)
-
-``` r
-print(paste(c("number of transcripts:"," before filtering ",dim(counts)[1]," after filtering ",dim(dge)[1])))
-```
-
-    ## [1] "number of transcripts:" " before filtering "     "171620"                
-    ## [4] " after filtering "      "32447"
-
-``` r
-print("While we get rid of most transcripts (lowly expressed), we keep a high proportion of all reads per samples")
-```
-
-    ## [1] "While we get rid of most transcripts (lowly expressed), we keep a high proportion of all reads per samples"
-
-``` r
-apply(dge,2,sum)/apply(counts,2,sum)
-```
-
-    ## silver_rep1 silver_rep2 silver_rep3 silver_rep4 silver_rep5 silver_rep6 
-    ##   0.9913808   0.9916407   0.9918556   0.9926842   0.9923784   0.9922659 
-    ## yellow_rep1 yellow_rep2 yellow_rep3 yellow_rep4 yellow_rep5 yellow_rep6 
-    ##   0.9930030   0.9936932   0.9932939   0.9927278   0.9925403   0.9934591
 
 ### Basic stats post filtering
 
@@ -181,10 +142,13 @@ v <- voom(dge, design, plot=TRUE, normalize="quantile")
 ![](DE_analysis_eels_files/figure-markdown_github/unnamed-chunk-7-1.png)
 
 ``` r
-plotMDS(v, labels=c("s1","s2","s3","s4","s5","s6","y1","y2","y3","y4","y5","y6"),main="MDS plot", col=rep(c("gray","gold"),each=6))
+pdf("MDS.pdf")
+plotMDS(v, pch=19, col=rep(c("gray","gold"),each=6),cex=6,frame=F,main="",xlim=c(-2,4),cex.axis=3,xaxt="n",yaxt="n")
+dev.off()
 ```
 
-![](DE_analysis_eels_files/figure-markdown_github/unnamed-chunk-7-2.png)
+    ## quartz_off_screen 
+    ##                 2
 
 ``` r
 fit <- lmFit(v, design)
@@ -240,14 +204,59 @@ plot(results$logFC,-log(results$adj.P.Val),pch=10,cex=0.1)
 points(DE_results$logFC,-log(DE_results$adj.P.Val),pch=10,cex=0.1,col="red")
 ```
 
+![](DE_analysis_eels_files/figure-markdown_github/unnamed-chunk-7-2.png)
+
+``` r
+results <- results %>%  mutate(
+    Expression = case_when(logFC >= 0 & adj.P.Val <= 0.05 ~ "Up-regulated",
+                           logFC <= 0 & adj.P.Val <= 0.05 ~ "Down-regulated",
+                           TRUE ~ "Unchanged"))
+  p2 <- ggplot(results, aes(logFC,-log10(adj.P.Val))) +
+  geom_point(aes(color = Expression), size = 2/5) +
+  xlab(expression("log"[2]*"FC")) + 
+  ylab(expression("-log"[10]*"FDR")) +
+  scale_color_manual(values = c(  "firebrick3","gray50","dodgerblue3")) +
+  guides(colour = guide_legend(override.aes = list(size=10),legend.key.size=10,title=""))  +theme_minimal()+theme(legend.text=element_text(size=20))
+  
+p2
+```
+
 ![](DE_analysis_eels_files/figure-markdown_github/unnamed-chunk-7-3.png)
+
+``` r
+ggsave( "ggvolcano.png", plot = p2)
+```
+
+    ## Saving 7 x 5 in image
+
+``` r
+results <- results %>%  mutate(
+    Expression = case_when(logFC >= 0 & adj.P.Val <= 0.05 ~ "Up-regulated",
+                           logFC <= 0 & adj.P.Val <= 0.05 ~ "Down-regulated",
+                           TRUE ~ "Unchanged"))
+  p2 <- ggplot(results, aes(logFC,-log10(adj.P.Val))) +
+  geom_point(aes(color = Expression),show.legend=F) +
+  xlab(expression("log"[2]*"FC")) + 
+  ylab(expression("-log"[10]*"FDR")) +
+  scale_color_manual(values = c(  "firebrick3","gray50","dodgerblue3"))   +theme_minimal()
+  
+p2
+```
+
+![](DE_analysis_eels_files/figure-markdown_github/unnamed-chunk-7-4.png)
+
+``` r
+ggsave( "ggvolcanonolegend.png", plot = p2)
+```
+
+    ## Saving 7 x 5 in image
 
 ``` r
 plot(results$AveExpr,results$logFC,pch=10,cex=0.1)
 points(DE_results$AveExpr,DE_results$logFC,pch=10,cex=0.1,col="red")
 ```
 
-![](DE_analysis_eels_files/figure-markdown_github/unnamed-chunk-7-4.png)
+![](DE_analysis_eels_files/figure-markdown_github/unnamed-chunk-7-5.png)
 
 Let's output those results as text tables that everyone can play with ( in excel or other). I saved it as [DE\_results.txt](DE_results.txt)
 
@@ -257,12 +266,21 @@ colnames(final_results_DE)[1]<-"GeneID"
 write.table(final_results_DE,"DE_results.txt",row.names=T,col.names=T,sep="\t")
 ```
 
-we also output the 32447 genes representing the whole genome for the GOSeq analysis:
+GO writing
+==========
 
 ``` r
+write(rownames(DE_results),"allDE.txt",sep="n")
+
+write.table(rownames(DE_results)[which(DE_results$logFC>0)],"upregulated.txt",row.names=F,col.names=F,quote=F)
+write.table(rownames(DE_results)[which(DE_results$logFC<0)],"downregulated.txt",row.names=F,col.names=F,quote=F)
+
 write(rownames(dge$counts),"backgroundGO.txt",sep="\n")
-write(rownames(dge$counts),"backgroundALLGO.txt",sep="\n")
+
+write(rownames(dge$counts)[-which(rownames(dge$counts)%in%rownames(DE_results))],"backgroundGOnooverlap.txt",sep="n")
 ```
+
+Split into logfoldchangeabove0 and logfoldchangebelow0
 
 And finally we upload the results for ALL the genes:
 
@@ -280,3 +298,96 @@ counts<-cpm(dge$counts)
 save(counts,results,file="countsand_logFCforplottingGene.RData")
 rm(counts) #to make sure I don't use it thinking it is counts
 ```
+
+Additional figures
+------------------
+
+Volcano plot with log2FC threshold at 2:
+
+``` r
+results <- results %>%  mutate(
+    Expression = case_when(logFC >= 2 & adj.P.Val <= 0.05 ~ "Up-regulated",
+                           logFC <= -2 & adj.P.Val <= 0.05 ~ "Down-regulated",
+                           TRUE ~ "Unchanged"))
+  p2 <- ggplot(results, aes(logFC,-log10(adj.P.Val))) +
+  geom_point(aes(color = Expression),show.legend=F) +
+  xlab(expression("log"[2]*"FC")) + 
+  ylab(expression("-log"[10]*"FDR")) +
+  scale_color_manual(values = c(  "firebrick3","gray50","dodgerblue3"))   +theme_minimal() #+geom_vline(xintercept = c(-2,2),  color = "black", size=0.5)
+  
+  p2
+```
+
+![](DE_analysis_eels_files/figure-markdown_github/unnamed-chunk-12-1.png)
+
+``` r
+  ggsave("ggvolcanonLFC2olegend.pdf",plot = p2)
+```
+
+    ## Saving 7 x 5 in image
+
+Volcano plot with log2FC threshold at 1.5:
+
+``` r
+results <- results %>%  mutate(
+    Expression = case_when(logFC >= 1.5 & adj.P.Val <= 0.05 ~ "Up-regulated",
+                           logFC <= -1.5 & adj.P.Val <= 0.05 ~ "Down-regulated",
+                           TRUE ~ "Unchanged"))
+  p2 <- ggplot(results, aes(logFC,-log10(adj.P.Val))) +
+  geom_point(aes(color = Expression),show.legend=F) +
+  xlab(expression("log"[2]*"FC")) + 
+  ylab(expression("-log"[10]*"FDR")) +
+  scale_color_manual(values = c(  "firebrick3","gray50","dodgerblue3"))   +theme_minimal() #+geom_vline(xintercept = c(-1.5,1.5),  color = "black", size=0.5)
+  
+  p2
+```
+
+![](DE_analysis_eels_files/figure-markdown_github/unnamed-chunk-13-1.png)
+
+``` r
+  ggsave("ggvolcanonLFC15olegend.pdf",plot = p2)
+```
+
+    ## Saving 7 x 5 in image
+
+Sample clustering:
+
+``` r
+ dds=DESeqDataSetFromMatrix(countData = round(dge$counts),colData = samples,design = ~rep(c("silver","yellow"),each=6))
+```
+
+    ## converting counts to integer mode
+
+``` r
+    dds <- DESeq(dds)
+```
+
+    ## estimating size factors
+
+    ## estimating dispersions
+
+    ## gene-wise dispersion estimates
+
+    ## mean-dispersion relationship
+
+    ## final dispersion estimates
+
+    ## fitting model and testing
+
+``` r
+vsd<-vst(dds,blind=T)
+sampleDists <- dist(t(assay(vsd)))
+sampleDistMatrix <- as.matrix(sampleDists)
+rownames(sampleDistMatrix) <- colnames(assay(vsd))
+colnames(sampleDistMatrix) <- NULL
+colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
+pdf("clustering_heatmap.pdf")
+pheatmap(sampleDistMatrix,
+         clustering_distance_rows=sampleDists,
+         clustering_distance_cols=sampleDists,
+         col=colors)
+dev.off()
+```
+
+    ## pdf 
+    ##   3

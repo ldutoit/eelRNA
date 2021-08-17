@@ -13,6 +13,7 @@ library(DESeq2)
 library(pheatmap)
 library(stringr)
 library(ggplot2)
+library(dplyr)
 library(matrixStats)
 library(pheatmap)
 library(edgeR)
@@ -39,8 +40,6 @@ dge <- DGEList(counts=counts)
 keep <- filterByExpr(counts, des) # inside function of limma aware of the design to remove rad counts
 dge <- dge[keep,keep.lib.sizes=FALSE]
 
-
-
 dge<- calcNormFactors(dge)
 print("After filtering, kept a matrix of X genes by Y samples:")
 dim(dge) 
@@ -48,17 +47,7 @@ dim(dge)
 ### Some visualisation after basic filtering
 ```{r}
 
-###all counts
-logCounts = log2(as.matrix(counts)+ 0.5)
-boxplot(as.matrix(logCounts) ~ col(logCounts),names=c("s1","s2","s3","s4","s5","s6","y1","y2","y3","y4","y5","y6"),main= "log Raw counts",sub="Y has a lot of transcripts with low counts",main="Counts before filtering")
 
-###dge
-logCounts = log2(as.matrix(dge)+ 0.5)
-boxplot(as.matrix(logCounts) ~ col(logCounts),names=c("s1","s2","s3","s4","s5","s6","y1","y2","y3","y4","y5","y6"),main= "log filtered counts")
-print(paste(c("number of transcripts:"," before filtering ",dim(counts)[1]," after filtering ",dim(dge)[1])))
-
-print("While we get rid of most transcripts (lowly expressed), we keep a high proportion of all reads per samples")
-apply(dge,2,sum)/apply(counts,2,sum)
 ```
 ### Basic stats post filtering
 
@@ -105,9 +94,9 @@ logCPM <- cpm(dge, log=TRUE)
 design <- model.matrix(~samples$treatment)
 
 v <- voom(dge, design, plot=TRUE, normalize="quantile")
-plotMDS(v, labels=c("s1","s2","s3","s4","s5","s6","y1","y2","y3","y4","y5","y6"),main="MDS plot", col=rep(c("gray","gold"),each=6))
-
-
+pdf("MDS.pdf")
+plotMDS(v, pch=19, col=rep(c("gray","gold"),each=6),cex=6,frame=F,main="",xlim=c(-2,4),cex.axis=3,xaxt="n",yaxt="n")
+dev.off()
 
 fit <- lmFit(v, design)
 fit <- eBayes(fit, trend=TRUE)
@@ -141,8 +130,31 @@ length(which(DE_results$logFC>1)) # how many genes over expressed in yellow
 plot(results$logFC,-log(results$adj.P.Val),pch=10,cex=0.1) 
 points(DE_results$logFC,-log(DE_results$adj.P.Val),pch=10,cex=0.1,col="red")
 
-
-
+results <- results %>%  mutate(
+    Expression = case_when(logFC >= 0 & adj.P.Val <= 0.05 ~ "Up-regulated",
+                           logFC <= 0 & adj.P.Val <= 0.05 ~ "Down-regulated",
+                           TRUE ~ "Unchanged"))
+  p2 <- ggplot(results, aes(logFC,-log10(adj.P.Val))) +
+  geom_point(aes(color = Expression), size = 2/5) +
+  xlab(expression("log"[2]*"FC")) + 
+  ylab(expression("-log"[10]*"FDR")) +
+  scale_color_manual(values = c(  "firebrick3","gray50","dodgerblue3")) +
+  guides(colour = guide_legend(override.aes = list(size=10),legend.key.size=10,title=""))  +theme_minimal()+theme(legend.text=element_text(size=20))
+  
+p2
+ggsave( "ggvolcano.png", plot = p2)
+results <- results %>%  mutate(
+    Expression = case_when(logFC >= 0 & adj.P.Val <= 0.05 ~ "Up-regulated",
+                           logFC <= 0 & adj.P.Val <= 0.05 ~ "Down-regulated",
+                           TRUE ~ "Unchanged"))
+  p2 <- ggplot(results, aes(logFC,-log10(adj.P.Val))) +
+  geom_point(aes(color = Expression),show.legend=F) +
+  xlab(expression("log"[2]*"FC")) + 
+  ylab(expression("-log"[10]*"FDR")) +
+  scale_color_manual(values = c(  "firebrick3","gray50","dodgerblue3"))   +theme_minimal()
+  
+p2
+ggsave( "ggvolcanonolegend.png", plot = p2)
 plot(results$AveExpr,results$logFC,pch=10,cex=0.1)
 points(DE_results$AveExpr,DE_results$logFC,pch=10,cex=0.1,col="red")
 ```
@@ -156,12 +168,16 @@ colnames(final_results_DE)[1]<-"GeneID"
 write.table(final_results_DE,"DE_results.txt",row.names=T,col.names=T,sep="\t")
 ```
 
-we also output the 32447 genes representing the whole genome for the GOSeq analysis:
-... not the 32447 but 32447- the background
-
+#GO writing
 ```{r}
+write(rownames(DE_results),"allDE.txt",sep="n")
+
+write.table(rownames(DE_results)[which(DE_results$logFC>0)],"upregulated.txt",row.names=F,col.names=F,quote=F)
+write.table(rownames(DE_results)[which(DE_results$logFC<0)],"downregulated.txt",row.names=F,col.names=F,quote=F)
+
 write(rownames(dge$counts),"backgroundGO.txt",sep="\n")
-write(rownames(dge$counts),"backgroundALLGO.txt",sep="\n")
+
+write(rownames(dge$counts)[-which(rownames(dge$counts)%in%rownames(DE_results))],"backgroundGOnooverlap.txt",sep="n")
 
 ```
 
@@ -183,4 +199,57 @@ write.table(final_results,"ALLgenes_results.txt",row.names=T,col.names=T,sep="\t
 counts<-cpm(dge$counts)
 save(counts,results,file="countsand_logFCforplottingGene.RData")
 rm(counts) #to make sure I don't use it thinking it is counts
+```
+
+
+## Additional figures
+Volcano plot with log2FC threshold at 2:
+```{r}
+results <- results %>%  mutate(
+    Expression = case_when(logFC >= 2 & adj.P.Val <= 0.05 ~ "Up-regulated",
+                           logFC <= -2 & adj.P.Val <= 0.05 ~ "Down-regulated",
+                           TRUE ~ "Unchanged"))
+  p2 <- ggplot(results, aes(logFC,-log10(adj.P.Val))) +
+  geom_point(aes(color = Expression),show.legend=F) +
+  xlab(expression("log"[2]*"FC")) + 
+  ylab(expression("-log"[10]*"FDR")) +
+  scale_color_manual(values = c(  "firebrick3","gray50","dodgerblue3"))   +theme_minimal() #+geom_vline(xintercept = c(-2,2),  color = "black", size=0.5)
+  
+  p2
+  ggsave("ggvolcanonLFC2olegend.pdf",plot = p2)
+```
+Volcano plot with log2FC threshold at 1.5:
+
+```{r}
+results <- results %>%  mutate(
+    Expression = case_when(logFC >= 1.5 & adj.P.Val <= 0.05 ~ "Up-regulated",
+                           logFC <= -1.5 & adj.P.Val <= 0.05 ~ "Down-regulated",
+                           TRUE ~ "Unchanged"))
+  p2 <- ggplot(results, aes(logFC,-log10(adj.P.Val))) +
+  geom_point(aes(color = Expression),show.legend=F) +
+  xlab(expression("log"[2]*"FC")) + 
+  ylab(expression("-log"[10]*"FDR")) +
+  scale_color_manual(values = c(  "firebrick3","gray50","dodgerblue3"))   +theme_minimal() #+geom_vline(xintercept = c(-1.5,1.5),  color = "black", size=0.5)
+  
+  p2
+  ggsave("ggvolcanonLFC15olegend.pdf",plot = p2)
+```
+
+Sample clustering:
+
+```{r}
+ dds=DESeqDataSetFromMatrix(countData = round(dge$counts),colData = samples,design = ~rep(c("silver","yellow"),each=6))
+    dds <- DESeq(dds)
+vsd<-vst(dds,blind=T)
+sampleDists <- dist(t(assay(vsd)))
+sampleDistMatrix <- as.matrix(sampleDists)
+rownames(sampleDistMatrix) <- colnames(assay(vsd))
+colnames(sampleDistMatrix) <- NULL
+colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
+pdf("clustering_heatmap.pdf")
+pheatmap(sampleDistMatrix,
+         clustering_distance_rows=sampleDists,
+         clustering_distance_cols=sampleDists,
+         col=colors)
+dev.off()
 ```

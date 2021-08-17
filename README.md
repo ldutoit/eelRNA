@@ -32,7 +32,7 @@ The differential expression analysis is done in [DE_analysis_eels.md](DE_analysi
 
 Annotation of the transcriptome is done in [annotate.md](annotate.md). That creates the file denovoassembly_annotation_report.xls Which is the complete annotation at the transcript level. 
 
-We then extract GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md)
+We then extract GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md). The outputs are in the text files [results_files/diff.GO.enriched](diff.GO.enriched) and  [results_files/diff.GO.depleted](diff.GO.depleted).
 
 
 
