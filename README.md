@@ -51,3 +51,6 @@ A couple of utilities to be able to dig in the data using R.
 
 
 [blast_candidate.md](blast_candidate.md) allows to blast genes using an example of 12 genes from Lucila.
+
+
+[extra_numbers.md](extra_numbers.md) is computing a couple of miscellaneous numbers and a heatmap to fill in the ms.
