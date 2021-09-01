@@ -24,15 +24,15 @@ length(which(passingfilter%in%annotated))
 
     ## [1] 20810
 
-### Part 2, obtain a heatmap of a specific 31 genes.
+## Part 2: obtain a heatmap of specific 31 genes.
 
-### Heatmaps 31 genes
+### Heatmaps focus genes
 
-Those are the 31
+Those are the focus
 genes
 
 ``` r
-gene_names<-c("TRINITY_DN701_c1_g1","TRINITY_DN2157_c0_g1","TRINITY_DN4120_c0_g1","TRINITY_DN3177_c2_g1","TRINITY_DN11818_c0_g2","TRINITY_DN7661_c0_g1","TRINITY_DN1565_c1_g1","TRINITY_DN7762_c1_g1","TRINITY_DN9258_c0_g2","TRINITY_DN447_c0_g1","TRINITY_DN9246_c0_g1","TRINITY_DN69174_c0_g1","TRINITY_DN3816_c0_g1","TRINITY_DN434_c0_g1","TRINITY_DN14218_c0_g1","TRINITY_DN259_c1_g1","TRINITY_DN2294_c0_g1","TRINITY_DN15680_c0_g1","TRINITY_DN2563_c8_g1","TRINITY_DN576_c0_g2","TRINITY_DN432_c0_g1","TRINITY_DN2384_c0_g1","TRINITY_DN22213_c0_g1","TRINITY_DN721_c0_g2","TRINITY_DN1800_c0_g1","TRINITY_DN3244_c0_g1","TRINITY_DN10366_c0_g1","TRINITY_DN4408_c0_g2","TRINITY_DN85011_c0_g1","TRINITY_DN17646_c0_g1","TRINITY_DN48_c0_g1")
+gene_names<-c("TRINITY_DN701_c1_g1","TRINITY_DN2157_c0_g1","TRINITY_DN4120_c0_g1","TRINITY_DN3177_c2_g1","TRINITY_DN11818_c0_g2","TRINITY_DN7661_c0_g1","TRINITY_DN1565_c1_g1","TRINITY_DN7762_c1_g1","TRINITY_DN9258_c0_g2","TRINITY_DN447_c0_g1","TRINITY_DN9246_c0_g1","TRINITY_DN69174_c0_g1","TRINITY_DN3816_c0_g1","TRINITY_DN434_c0_g1","TRINITY_DN14218_c0_g1","TRINITY_DN259_c1_g1","TRINITY_DN2294_c0_g1","TRINITY_DN15680_c0_g1","TRINITY_DN2563_c8_g1","TRINITY_DN576_c0_g2","TRINITY_DN432_c0_g1","TRINITY_DN2384_c0_g1","TRINITY_DN22213_c0_g1","TRINITY_DN721_c0_g2","TRINITY_DN1800_c0_g1","TRINITY_DN3244_c0_g1","TRINITY_DN10366_c0_g1","TRINITY_DN4408_c0_g2","TRINITY_DN85011_c0_g1","TRINITY_DN17646_c0_g1","TRINITY_DN48_c0_g1","TRINITY_DN3798_c0_g1")
 ```
 
 Run the modelling
@@ -250,7 +250,7 @@ dim(dge)
 logCPM <- cpm(dge, log=TRUE)
 ```
 
-Isolate those 31
+Isolate those focus
 genes:
 
 ``` r
@@ -279,7 +279,7 @@ pheatmap(mat,show_rownames = T,cellwidth=5,cellheight=5,border_color="lightgrey"
 ![](extra_numbers_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
-pdf("heatmap31genes.pdf")
+pdf("heatmapfocusgenes.pdf")
 pheatmap(mat,show_rownames = T,cellwidth=5,cellheight=5,border_color="lightgrey",cluster_row=T,cluster_col=F,fontsize=6) 
 dev.off()
 ```
