@@ -19,7 +19,7 @@ ln -s ~/projects/eelRNA/source_files/ .
 cd /nesi/nobackup/uoo00116/eelrna/source_files/CleandatafromBGI
 ```
 
-I create a sample files  as per below (samples_file.txt)
+I create a sample file as per below, saved in  [samples_file.txt](samples_files.txt)
 
 
 ```
@@ -37,31 +37,7 @@ silver	silver_rep6	source_files/CleandatafromBGI/6LS_1.fq.gz	source_files/Cleand
 yellow	yellow_rep6	source_files/CleandatafromBGI/6LY_1.fq.gz	source_files/CleandatafromBGI/6LY_2.fq.gz
 ```
 
-
-
-Then I run trinity with the two strand option given I am not sure which one I should use from the BGI report.
-
-
-```
-#!/bin/bash -e
-#SBATCH --job-name=trinity-phase1_RF
-#SBATCH --account=uoo00116   # your NeSI project code
-#SBATCH --time=30:00:00       # maximum run time
-#SBATCH --ntasks=1            # always 1
-#SBATCH --cpus-per-task=16    # number of threads to use for Trinity
-#SBATCH --mem=220G            # maximum memory available to Trinity
-#SBATCH --partition=bigmem    # based on memory requirements
-#SBATCH --hint=nomultithread  # disable hyper-threading
-
-# load a Trinity module
-module load Trinity/2.8.5-gimkl-2018b
-
-# run trinity, stop before phase 2
-srun Trinity --no_distributed_trinity_exec \
-  --CPU ${SLURM_CPUS_PER_TASK} --max_memory 200G \
-  --samples_file samples_file.txt --SS_lib_type RF   --output RF_trinity_output
-```
-
+Then I run trinity in 2 phases as per my specific [cluster instructions](https://support.nesi.org.nz/hc/en-gb/articles/360000980375-Trinity). This is simply a locally optimised way of running the main `Trinit` denovo assembly command.
 
 
 ```
@@ -114,7 +90,7 @@ The next step is to obtain a count matrix
 I used the tutorial at:
 https://southgreenplatform.github.io/trainings/trinityTrinotate/TP-trinity/
 
-The combination of modules and environment below is extremely weird, but it works.
+The combination of modules is cumbersome (due to compiler issues) but it works for me.
 
 
 
@@ -158,7 +134,7 @@ ln -s ../yellow_rep6/RSEM.genes.results yellow_rep6.txt
 
 In order to create a singleclean matrix we go into R and use the tximport module
 
-from within ```gene_counts/RSEM_results```
+from within the directory  ```gene_counts/RSEM_results```
 
 ```R
 library("tximport")

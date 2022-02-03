@@ -1,17 +1,17 @@
 ### go enchrichment analysis
 
 
-denovoassembly_annotation_report.xls is the original trinotate output
+[results_files/denovoassembly_annotation_report.xls.gz]([results_files/denovoassembly_annotation_report.xls.gz) is the original trinotate output. Note that of the code below is specific to my installation of trinotate.
 
-https://github.com/trinityrnaseq/trinityrnaseq/wiki/Running-GOSeq contains the methodology fr the go enrichment analysis
+https://github.com/trinityrnaseq/trinityrnaseq/wiki/Running-GOSeq contains the methodology fr the go enrichment analysis and was used as a template.
 
 
 
 ### Extract go terms
 
 ```
-module load Miniconda3
-source activate transdecoder
+module load Miniconda3 #specific to my installation of trinotate
+source activate transdecoder  #specific to my installation of trinotate
 extract_GO_assignments_from_Trinotate_xls.pl --gene \
                          --Trinotate_xls  denovoassembly_annotation_report.xls \
                          -G --include_ancestral_terms \
@@ -111,9 +111,10 @@ mv diff.GOseq.depleted  ~/repos/scripts/eelRNA/results_files/allDE.GOseq.deplete
 mv diff.GOseq.enriched  ~/repos/scripts/eelRNA/results_files/allDE.GOseq.enriched                 
 ```
 
-I save those files in this repository as [results_files/diff.GOseq.depleted](results_files/diff.GOseq.depleted) and [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched)
+
 
 **Upregulated only**
+
 ```bash
 cat ~/repos/scripts/eelRNA/upregulated.txt |  awk '{print "diff\t",$0}'    >factor_labelingupregulated.txt
 /opt/nesi/CS400_centos7_bdw/Trinity/2.8.5-gimkl-2018b/trinityrnaseq-Trinity-v2.8.5/Analysis/DifferentialExpression/run_GOseq.pl \
@@ -125,7 +126,8 @@ mv diff.GOseq.depleted  ~/repos/scripts/eelRNA/results_files/logFCbiggerthan0_di
 mv diff.GOseq.enriched  ~/repos/scripts/eelRNA/results_files/logFCbiggerthan0_diff.GOseq.enriched
 
 ```
-**down regulated
+**down regulated only**
+
 ```bash
 cat ~/repos/scripts/eelRNA/downregulated.txt |  awk '{print "diff\t",$0}'    >factor_labelingdownregulated.txt
 /opt/nesi/CS400_centos7_bdw/Trinity/2.8.5-gimkl-2018b/trinityrnaseq-Trinity-v2.8.5/Analysis/DifferentialExpression/run_GOseq.pl \
@@ -136,3 +138,4 @@ cat ~/repos/scripts/eelRNA/downregulated.txt |  awk '{print "diff\t",$0}'    >fa
 mv diff.GOseq.depleted  ~/repos/scripts/eelRNA/results_files/logFClowerthan0_diff.GOseq.depleted 
 mv diff.GOseq.enriched  ~/repos/scripts/eelRNA/results_files/logFClowerthan0_diff.GOseq.enriched
 ```
+I save those files in this repository as [results_files/diff.GOseq.depleted](results_files/allDE.GOseq.depleted) and [results_files/diff.GOseq.enriched](results_files/allDE.GOseq.enriched)
