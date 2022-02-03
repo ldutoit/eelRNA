@@ -20,7 +20,7 @@ Notes on some of the main files:
 
 - The Gene ontology enrichment analysis is saved in [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched) and [diff.GOseq.depleted](results_files/diff.GOseq.depleted). 
 
-- Finally, The transcripts fasta sequences are in [results_files/Trinity.fasta.gz](results_files/Trinity.fasta.gz)
+- Finally, The transcripts fasta sequences are in [results_files/Trinity.fasta.gz](results_files/Trinity.fasta.gz).
 
 
 - The raw data is saved on the SRA at project PRJNA785278. The un-annotated transcriptome is [results_files/Trinity.fasta.gz](results_files/Trinity.fasta.gz). The annotation Trinotate output is [results_files/denovoassembly_annotation_report.xls.gz](results_files/denovoassembly_annotation_report.xls.gz). 
