@@ -20,27 +20,23 @@ Finally, all the transcripts fasta sequences are in [results_files/Trinity.fasta
 
 ## Description
 
-The raw data is saved on the HCS of otago university: 
-```
-/sci-bioinformatics-project-archive/Transcriptome data Lucila 2019
-```
-contact dutoit.ludovic@gmail.com for access
+The raw data is saved on the SRA at project PRJNA785278.
 
 ## Analyses
 
 ### Building the transcriptome and obtaining counts.
 
-The transcriptome is built in [trinityrun.md](trinityrun.md) all the way to obtaining gene-level counts for the 12 samples.
+The transcriptome is built in [trinityrun.md](trinityrun.md) all the way to obtaining gene-level counts for the 12 samples. Annotation of the transcriptome was done using [annotate.md](annotate.md). That creates the Trinotate output [denovoassembly_annotation_report.xls](denovoassembly_annotation_report.xls) Which is the complete annotation at the transcript level. 
+
 
 ### Differential Expression (DE) Analysis
 
-The differential expression analysis is done in [DE_analysis_eels.md](DE_analysis_eels.md). Annotation of the transcriptome was done using [annotate.md](annotate.md).
+The differential expression analysis is done in [DE_analysis_eels.md](DE_analysis_eels.md). 
 
 ### GO Enrichment
 
-That creates the file denovoassembly_annotation_report.xls Which is the complete annotation at the transcript level. 
 
-We then extracted GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md). The outputs are in the text files [results_files/diff.GO.enriched](diff.GO.enriched) and  [results_files/diff.GO.depleted](diff.GO.depleted).
+We  extracted GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md). The outputs are in the text files [results_files/diff.GO.enriched](diff.GO.enriched) and  [results_files/diff.GO.depleted](diff.GO.depleted).
 
 
 
