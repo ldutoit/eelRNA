@@ -1,18 +1,6 @@
 # Trinity run
 
-Trinity is run on the mahuika server on the nobackup partition nobackup following nesi instructions https://support.nesi.org.nz/hc/en-gb/articles/360000980375-Trinity
-
-
-```
-cd /nesi/nobackup/uoo00116/eelrna
-```
-
-
-After checking the quality of the data within
-
-using Fastqc.
-
-I learn that the data is very good with 35Mio paired end reads per sample.
+After checking the quality of the data within using Fastqc, I confirm that the data is very good with 35Mio paired end reads per sample.
 
 ```
 ln -s ~/projects/eelRNA/source_files/ .
@@ -90,18 +78,17 @@ The next step is to obtain a count matrix
 I used the tutorial at:
 https://southgreenplatform.github.io/trainings/trinityTrinotate/TP-trinity/
 
-The combination of modules is cumbersome (due to compiler issues) but it works for me.
-
-
+The combination of modules is a bit over the top (due to compiler issues) but it works for me.
 
 ```
+#user specific environment
 module purge
 module load Trinity/2.8.4-gimkl-2017a
 module load Miniconda3
 source activate transdecoder #modu that contains rm #rsem and other of my trinity utils
 module load  Trinity/2.8.4-gimkl-2017a SAMtools/1.8-gimkl-2017a Bowtie/1.2.0-gimkl-2017a RSEM/1.3.1-gimkl-2017a
 
-
+#Trinity command
 align_and_estimate_abundance.pl \
 --transcripts FR_trinity_output/Trinity.fasta \
 --seqType fq \
