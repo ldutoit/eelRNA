@@ -11,17 +11,19 @@ Feel free to ask for help to dutoit.ludovic@gmail.com when accessing this reposi
 
 We build the transcriptome of the NZ eel denovo using Trinity, we then performed a quick annotation using Trinotate. 
 
-We then run differential expression between 6 Yellow and 6 silver eels with 100bp paired-end data. 
+We then run differential expression between 6 Yellow and 6 silver eels with 100bp paired-end data. Usis this repository, the analysis should be entirely reproducible. The main output files are here.
 
-All the differentially expressed genes with statistics and counts are saved in [results_files/DE_results.txt](results_files/DE_results.txt). Statistics and counts for ALL Genes are in [results_files/ALLgenes_results.txt](results_files/ALLgenes_results.txt).
+Notes on some of the main files:
 
-The Gene ontology enrichment analysis is saved in [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched) and [diff.GOseq.depleted](results_files/diff.GOseq.depleted). 
 
-Finally, all the transcripts fasta sequences are in [results_files/Trinity.fasta.gz](results_files/Trinity.fasta.gz)
+- All the differentially expressed genes with statistics and counts are saved in [results_files/DE_results.txt](results_files/DE_results.txt). Statistics and counts for ALL Genes are in [results_files/ALLgenes_results.txt](results_files/ALLgenes_results.txt).
 
-## Description
+- The Gene ontology enrichment analysis is saved in [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched) and [diff.GOseq.depleted](results_files/diff.GOseq.depleted). 
 
-The raw data is saved on the SRA at project PRJNA785278. The unattoated transcriptome is [results_files/Trinity.fasta.gz](results_files/Trinity.fasta.gz). The annotation Trinotate output is [results_files/denovoassembly_annotation_report.xls.gz](results_files/denovoassembly_annotation_report.xls.gz). 
+- Finally, The transcripts fasta sequences are in [results_files/Trinity.fasta.gz](results_files/Trinity.fasta.gz)
+
+
+- The raw data is saved on the SRA at project PRJNA785278. The un-annotated transcriptome is [results_files/Trinity.fasta.gz](results_files/Trinity.fasta.gz). The annotation Trinotate output is [results_files/denovoassembly_annotation_report.xls.gz](results_files/denovoassembly_annotation_report.xls.gz). 
 
 
 ## Analyses
