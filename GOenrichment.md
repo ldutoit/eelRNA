@@ -98,7 +98,7 @@ biocLite("qvalue") # that on
 biocLite("goseq")  
 ```
 
-### RUN THE GO ANALYSIS:
+## Run the actual GO analysis
 
 ```bash
 /opt/nesi/CS400_centos7_bdw/Trinity/2.8.5-gimkl-2018b/trinityrnaseq-Trinity-v2.8.5/Analysis/DifferentialExpression/run_GOseq.pl \
