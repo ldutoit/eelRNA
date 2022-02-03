@@ -78,9 +78,8 @@ Finish the gene lengths:
  cut -f 2  ~/repos/scripts/eelRNA/results_files/DE_results.txt  | tail -n 10348  |  awk '{print "diff\t",$0}' | sed -s 's/\"//g'    >factor_labeling.txt
 ```
 
- NOTE 10348 because that is the number of DE genes, there is 10349 lines with a header 
 
-##Install GOSeq dependencies ( not covered in tutorial)
+# #Install GOSeq dependencies ( not covered in tutorial)
 
 
  I installed goseq using conda inside the transdecoder conda environment:
@@ -138,4 +137,4 @@ cat ~/repos/scripts/eelRNA/downregulated.txt |  awk '{print "diff\t",$0}'    >fa
 mv diff.GOseq.depleted  ~/repos/scripts/eelRNA/results_files/logFClowerthan0_diff.GOseq.depleted 
 mv diff.GOseq.enriched  ~/repos/scripts/eelRNA/results_files/logFClowerthan0_diff.GOseq.enriched
 ```
-I save those files in this repository as [results_files/diff.GOseq.depleted](results_files/allDE.GOseq.depleted) and [results_files/diff.GOseq.enriched](results_files/allDE.GOseq.enriched)  
+I save those files in this repository as [results_files/allDE.GOseq.depleted](results_files/allDE.GOseq.depleted) and [results_files/dallDE.GOseq.depleted](results_files/allDE.GOseq.enriched)  
