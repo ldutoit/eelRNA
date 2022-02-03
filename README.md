@@ -39,5 +39,5 @@ All necessary files are in this repository. The differential expression analysis
 
 ### GO Enrichment
 
-We  extracted GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md). The outputs are in the text files [results_files/diff.GO.enriched](allDE.GOseq.enriched) and  [results_files/diff.GO.depleted](allDE.GOseq.depleted).
+We  extracted GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md). The outputs are in the text files [results_files/allDE.GOseq.enriched](results_files/allDE.GOseq.enriched) and  [results_files/allDE.GOseq.depleted](results_files/allDE.GOseq.depleted).
 
