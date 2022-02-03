@@ -136,7 +136,5 @@ write.table(txi.rsem$counts,"RSEM_gene_counts.txt",row.names=T,col.names=T,sep="
 ```
 
 
-We can use the expected counts into DeSEQ2 as outlined by Love (DESeq2 author) [here](https://support.bioconductor.org/p/90672/)
-
 I saved the count matrix in this repository [results_files/RSEM_gene_counts.txt](results_files/RSEM_gene_counts.txt)
 
