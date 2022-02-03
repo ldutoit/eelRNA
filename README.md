@@ -30,7 +30,7 @@ For detailed methods, refer to the published article above.
 
 ### Building the transcriptome and obtaining counts.
 
-The transcriptome is built in [trinityrun.md](trinityrun.md) all the way to obtaining gene-level counts for the 12 samples. Annotation of the transcriptome was done using [annotate.md](annotate.md). That creates the Trinotate output [results_files/denovoassembly_annotation_report.xls](results_files/denovoassembly_annotation_report.xls.gz) Which is the complete annotation at the transcript level. 
+The transcriptome is built in [trinityrun.md](trinityrun.md) all the way to obtaining gene-level counts for the 12 samples. Annotation of the transcriptome was done using [annotate.md](annotate.md). That creates the Trinotate output [results_files/denovoassembly_annotation_report.xls.gz](results_files/denovoassembly_annotation_report.xls.gz) Which is the complete annotation at the transcript level. 
 
 
 ### Differential Expression (DE) Analysis
@@ -39,5 +39,6 @@ All necessary files are in this repository. The differential expression analysis
 
 ### GO Enrichment
 
-We  extracted GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md). The outputs are in the text files [results_files/allDE.GOseq.enriched](results_files/allDE.GOseq.enriched) and  [results_files/allDE.GOseq.depleted](results_files/allDE.GOseq.depleted).
+We  extracted GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md). The Gene ontology enrichment analysis results are saved in [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched) and [diff.GOseq.depleted](results_files/diff.GOseq.depleted). 
+
 
