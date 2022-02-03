@@ -7,7 +7,7 @@ https://github.com/trinityrnaseq/trinityrnaseq/wiki/Running-GOSeq contains the m
 
 
 
-### Extract go terms
+### Extract GO terms
 
 ```
 module load Miniconda3 #specific to my installation of trinotate
@@ -18,7 +18,7 @@ extract_GO_assignments_from_Trinotate_xls.pl --gene \
                          > go_annotations.txt
 ````
 
-##Extract GENE lengths files
+### Extract GENE lengths files
 
 extract gene lengths to be able to account for gene length in GOseq annotation.
 
@@ -79,7 +79,7 @@ Finish the gene lengths:
 ```
 
 
-# #Install GOSeq dependencies ( not covered in tutorial)
+### Install GOSeq dependencies ( not covered in tutorial)
 
 
  I installed goseq using conda inside the transdecoder conda environment:
@@ -98,7 +98,7 @@ biocLite("qvalue") # that on
 biocLite("goseq")  
 ```
 
-## RUN THE GO ANALYSIS:
+### RUN THE GO ANALYSIS:
 
 ```bash
 /opt/nesi/CS400_centos7_bdw/Trinity/2.8.5-gimkl-2018b/trinityrnaseq-Trinity-v2.8.5/Analysis/DifferentialExpression/run_GOseq.pl \
