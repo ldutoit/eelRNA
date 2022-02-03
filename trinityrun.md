@@ -7,7 +7,7 @@ ln -s ~/projects/eelRNA/source_files/ .
 cd /nesi/nobackup/uoo00116/eelrna/source_files/CleandatafromBGI
 ```
 
-I create a sample file as per below, saved in  [samples_file.txt](samples_files.txt)
+I create a sample file as per below, saved in  [samples_file.txt](samples_file.txt)
 
 
 ```
