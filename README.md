@@ -9,9 +9,9 @@ Feel free to ask for help to dutoit.ludovic@gmail.com when accessing this reposi
 
 ## Summary
 
-We build the transcriptome of the NZ eel denovo using Trinity, we then performed a quick annotation using Trinotate. 
+We build the transcriptome of the shortfinned eel (*Anguilla australis*) denovo using Trinity, we then performed a quick annotation using Trinotate. 
 
-We then run differential expression between 6 Yellow and 6 silver eels with 100bp paired-end data. Usis this repository, the analysis should be entirely reproducible. The main output files are here.
+We then run differential expression between 6 Yellow and 6 silver eels with 100bp paired-end data. Using this repository, the analysis should be entirely reproducible. The main output files are here.
 
 Notes on some of the main files:
 
@@ -41,6 +41,6 @@ All necessary files are in this repository. The differential expression analysis
 
 ### GO Enrichment
 
-We  extracted GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md). The Gene ontology enrichment analysis results are saved in [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched) and [diff.GOseq.depleted](results_files/diff.GOseq.depleted). 
+We  extracted GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md). The gAnguilla australisene ontology enrichment analysis results are saved in [results_files/diff.GOseq.enriched](results_files/diff.GOseq.enriched) and [diff.GOseq.depleted](results_files/diff.GOseq.depleted). 
 
 
