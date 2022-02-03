@@ -1,9 +1,9 @@
 ### GO enchrichment analysis
 
 
-[results_files/denovoassembly_annotation_report.xls.gz]([results_files/denovoassembly_annotation_report.xls.gz) is the original trinotate output. Note that of the code below is specific to my installation of trinotate.
+[results_files/denovoassembly_annotation_report.xls.gz](results_files/denovoassembly_annotation_report.xls.gz) is the original trinotate output. Note that of the code below is specific to my installation of trinotate.
 
-https://github.com/trinityrnaseq/trinityrnaseq/wiki/Running-GOSeq contains the methodology fr the go enrichment analysis and was used as a template.
+https://github.com/trinityrnaseq/trinityrnaseq/wiki/Running-GOSeq contains the methodology for the GO enrichment analysis and was used as a template.
 
 
 
