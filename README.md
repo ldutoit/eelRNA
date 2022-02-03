@@ -21,7 +21,7 @@ Finally, all the transcripts fasta sequences are in [results_files/Trinity.fasta
 
 ## Description
 
-The raw data is saved on the SRA at project PRJNA785278. The unattoated transcriptome is [results_files/Trinity.fasta.gz](results_files/Trinity.fasta.gz). The annotation Trinotate output is [results_files/denovoassembly_annotation_report.xls](results_files/denovoassembly_annotation_report.xls). 
+The raw data is saved on the SRA at project PRJNA785278. The unattoated transcriptome is [results_files/Trinity.fasta.gz](results_files/Trinity.fasta.gz). The annotation Trinotate output is [results_files/denovoassembly_annotation_report.xls.gz](results_files/denovoassembly_annotation_report.xls.gz). 
 
 
 ## Analyses
