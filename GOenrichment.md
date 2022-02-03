@@ -1,4 +1,4 @@
-### go enchrichment analysis
+### GO enchrichment analysis
 
 
 [results_files/denovoassembly_annotation_report.xls.gz]([results_files/denovoassembly_annotation_report.xls.gz) is the original trinotate output. Note that of the code below is specific to my installation of trinotate.
