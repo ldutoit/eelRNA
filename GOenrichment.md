@@ -138,4 +138,4 @@ cat ~/repos/scripts/eelRNA/downregulated.txt |  awk '{print "diff\t",$0}'    >fa
 mv diff.GOseq.depleted  ~/repos/scripts/eelRNA/results_files/logFClowerthan0_diff.GOseq.depleted 
 mv diff.GOseq.enriched  ~/repos/scripts/eelRNA/results_files/logFClowerthan0_diff.GOseq.enriched
 ```
-I save those files in this repository as [results_files/diff.GOseq.depleted](results_files/allDE.GOseq.depleted) and [results_files/diff.GOseq.enriched](results_files/allDE.GOseq.enriched)
+I save those files in this repository as [results_files/diff.GOseq.depleted](results_files/allDE.GOseq.depleted) and [results_files/diff.GOseq.enriched](results_files/allDE.GOseq.enriched)  
