@@ -35,26 +35,5 @@ The differential expression analysis is done in [DE_analysis_eels.md](DE_analysi
 
 ### GO Enrichment
 
-
 We  extracted GO terms at the gene level  and performed the GO enrichment analysis in the file [GOenrichment.md](GOenrichment.md). The outputs are in the text files [results_files/diff.GO.enriched](diff.GO.enriched) and  [results_files/diff.GO.depleted](diff.GO.depleted).
 
-
-
-## Utilities
-
-A couple of utilities to be able to dig in the data using R.
-
-
-
-[plotting_genes.R](plotting_genes.R) allows to plot the transcripts read counts. It needs both ggplot2 (the first time you may need to install it using install.packages(“tidyverse”) and the file countsand_logFCforplotting.RData inside the same folder than the script (that file contains the results of the analysis and the counts table as R objects).
-
-[plotting_transcript.R](plotting_transcript.R)The same as plotting genes but utilising salmon transcript-level counts.
-
-
-[extract_sequences.R](extract_sequences.R) This script extract ssequences from the transcript files or the peptide files and save it one sequence file. It works with the file Trinity.fasta ( mRNAs) and the file Trinity.fasta.transdecoder.pep ( contact author for access).
-
-
-[blast_candidate.md](blast_candidate.md) allows to blast genes using an example of 12 genes from Lucila.
-
-
-[extra_numbers.md](extra_numbers.md) is computing a couple of miscellaneous numbers and a heatmap to fill in the ms.
