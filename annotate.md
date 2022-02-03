@@ -25,7 +25,7 @@ Trinotate Trinotate.sqlite init --gene_trans_map Trinity.fasta.gene_trans_map \
 ```
 
 
-Do the blasting:
+BLAST:
 
 ```bash
 #Blast
@@ -47,6 +47,6 @@ Trinotate Trinotate.sqlite LOAD_swissprot_blastx
 Trinotate-Trinotate-v3.1.1/Trinotate Trinotate.sqlite report > denovoassembly_annotation_report.xls
 ```
 
-That is the final assembly report, sotred here compressed as [results_files/denovoassembly_annotation_report.xls.gz](results_files/denovoassembly_annotation_report.xls.gz)
+That is the final assembly report, stored [results_files/denovoassembly_annotation_report.xls.gz](results_files/denovoassembly_annotation_report.xls.gz)
 
 
