@@ -1,1 +1,0 @@
-"GeneID"	"logFC"	"AveExpr"	"t"	"P.Value"	"adj.P.Val"	"B"	"Expression"	"silver_rep1"	"silver_rep2"	"silver_rep3"	"silver_rep4"	"silver_rep5"	"silver_rep6"	"yellow_rep1"	"yellow_rep2"	"yellow_rep3"	"yellow_rep4"	"yellow_rep5"	"yellow_rep6"
