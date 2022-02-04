@@ -1,5 +1,6 @@
 # Trinity run
 
+
 After checking the quality of the data within using Fastqc, I confirm that the data is very good with 35Mio paired end reads per sample.
 
 ```
@@ -8,6 +9,8 @@ cd /nesi/nobackup/uoo00116/eelrna/source_files/CleandatafromBGI
 ```
 
 I create a sample file as per below, saved in  [samples_file.txt](samples_file.txt)
+
+*Thoughout this project, yellow refers to the pre-vitellogenic stage (PV) and silver to the early vitellogenic stage (EV).*
 
 
 ```
