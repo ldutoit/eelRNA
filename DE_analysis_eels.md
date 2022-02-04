@@ -3,6 +3,9 @@ DE\_analysis\_eels
 Ludovic Dutoit
 3/11/2020
 
+*Thoughout this project, yellow refers to the pre-vitellogenic stage (PV) and silver to the early vitellogenic stage (EV).*
+
+
 First, I go through the dataset, here it is:
 
 ``` r
