@@ -11,7 +11,7 @@ Feel free to ask for help to dutoit.ludovic@gmail.com when accessing this reposi
 
 We build the transcriptome of the shortfinned eel (*Anguilla australis*) denovo using Trinity, we then performed a quick annotation using Trinotate. 
 
-Thoughout this project, yellow refers to the pre-vitellogenic stage (PV) and silver to the early vitellogenic stage (EV).
+*Thoughout this project, yellow refers to the pre-vitellogenic stage (PV) and silver to the early vitellogenic stage (EV).*
 
 We then run differential expression between 6 Yellow and 6 silver eels with 100bp paired-end data. Using this repository, the analysis should be entirely reproducible. The main output files are here.
 
