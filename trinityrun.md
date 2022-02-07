@@ -93,7 +93,8 @@ module load  Trinity/2.8.4-gimkl-2017a SAMtools/1.8-gimkl-2017a Bowtie/1.2.0-gim
 
 #Trinity command
 align_and_estimate_abundance.pl \
---transcripts FR_trinity_output/Trinity.fasta \
+--transcripts FR_trinity_output/Trinity.
+\
 --seqType fq \
 --samples_file samples_file.txt \
 --est_method RSEM --aln_method bowtie2 \
@@ -139,5 +140,4 @@ write.table(txi.rsem$counts,"RSEM_gene_counts.txt",row.names=T,col.names=T,sep="
 ```
 
 
-I saved the count matrix in this repository [results_files/RSEM_gene_counts.txt](results_files/RSEM_gene_counts.txt)
 
