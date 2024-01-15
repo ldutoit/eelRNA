@@ -7,7 +7,7 @@
 #https://github.com/TransDecoder/TransDecoder/wiki
 module load Miniconda3
 source activate transdecoder
-#TransDecoder.LongOrfs -t Trinity.fasta
+TransDecoder.LongOrfs -t Trinity.fasta
 TransDecoder.Predict -t Trinity.fasta
 ```
 
